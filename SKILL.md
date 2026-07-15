@@ -1,12 +1,12 @@
 ---
 name: slop-cop
 description: >-
-  Audits, grades, and rewrites generic, formulaic, or low-information patterns
-  in prose, UI/design, and code. Use when the user asks to de-slop, humanize,
-  tighten, grade, or review AI-assisted writing, generated interfaces, or
-  maintainability/security problems in code. Do not use this skill to claim
-  that a person or model authored content; it evaluates observable quality
-  patterns, not provenance.
+  Audit, grade, and rewrite generic AI-slop patterns in prose, social posts,
+  UI/design, and code. Use when asked to de-slop writing, humanize AI copy,
+  grade a draft, review a landing page or generated interface, remove vague
+  claims and repetitive rhetoric, or inspect AI-written code for generic
+  abstractions and happy-path-only logic. Do not use to determine whether AI
+  authored something.
 license: MIT
 compatibility: Works in Agent Skills-compatible environments that support Markdown references.
 metadata:

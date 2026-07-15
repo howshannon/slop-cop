@@ -43,10 +43,6 @@ gh api --method PUT "repos/$repo/branches/main/protection" \
 }
 JSON
 
-if [[ "${REQUIRE_SIGNED_COMMITS:-0}" == "1" ]]; then
-  gh api --method POST "repos/$repo/branches/main/protection/required_signatures" \
-    -H "Accept: application/vnd.github+json"
-fi
 
 printf 'Configured security features and main-branch protection for %s.\n' "$repo"
 printf 'After the first successful workflow run, confirm the required check name in Settings > Rules.\n'

@@ -79,7 +79,7 @@ Best practice: run it on anything you wrote that a human will read, and treat th
 ## What's in here
 
 ```
-slopcop/
+slop-cop/
 ├── SKILL.md                     the rules and the forced scoring procedure
 ├── references/
 │   ├── prose-phrases.md         banned verbs, adjectives, filler openers, plain swaps
