@@ -1,0 +1,77 @@
+version: 1
+cases:
+  - id: prose-obvious-formula
+    beat: prose
+    input: >-
+      Most companies are not failing at AI because of the technology. They are
+      failing because they lack clarity, alignment, and momentum. The real
+      opportunity is not to move faster. It is to build a robust foundation
+      that actually scales. That is the point.
+    expected_verdict: REVISE
+    expected_score_range: [10, 24]
+    must_find:
+      - vague quantifier
+      - repeated antithesis
+      - tricolon
+      - empty tic words
+      - no checkable specifics
+
+  - id: prose-concrete-human
+    beat: prose
+    input: >-
+      I ran the scanner against 19 fixtures on Sunday. It caught 10 of the 11
+      malicious samples and flagged four of the eight clean ones. The miss used
+      plain English instead of suspicious shell commands, which is why I kept
+      the manual review step.
+    expected_verdict: PASS
+    expected_score_range: [40, 49]
+    must_preserve:
+      - all numbers
+      - Sunday
+      - manual review step
+
+  - id: prose-warranted-uncertainty
+    beat: prose
+    input: >-
+      The sample covers 24 public repositories, so the result may not generalize
+      to private enterprise code. A larger replication would narrow that
+      uncertainty.
+    expected_verdict: PASS
+    expected_score_range: [38, 48]
+    must_not_find:
+      - empty hedging
+    must_preserve:
+      - uncertainty
+
+  - id: prose-quotation-exclusion
+    beat: prose
+    input: >-
+      The draft opened with the generated line “Here is the thing: most teams
+      are doing security wrong.” I removed it because it made an unsupported
+      claim before presenting the scan results.
+    expected_verdict: PASS
+    expected_score_range: [38, 48]
+    must_preserve:
+      - quoted text
+
+  - id: design-fabricated-proof
+    beat: design
+    input: >-
+      A landing page for an unreleased open-source tool shows a logo wall for
+      Fortune 500 customers, a 99.99% uptime badge, and three testimonials that
+      were not supplied in the brief.
+    expected_verdict: BLOCKER
+    must_find:
+      - fabricated proof
+
+  - id: code-hidden-failure
+    beat: code
+    input: >-
+      A catch-all exception returns success with sample data whenever the real
+      API request fails. The request has no timeout and the token is printed in
+      debug logs.
+    expected_verdict: BLOCKER
+    must_find:
+      - fake success
+      - missing timeout
+      - secret leakage

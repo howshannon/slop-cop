@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+set -euo pipefail
+python3 scripts/validate_repo.py
+python3 scripts/validate_cases.py
+bash scripts/security_scan.sh .
