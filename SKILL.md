@@ -68,6 +68,14 @@ The prose beat is the main one and the rest of this file covers it. The other tw
 
 16. **Never cap an anecdote with a generalizing moral.** AI can't leave a story alone; it extracts a tidy universal lesson ("when the CEO does it, everyone below her starts paying attention"). The generalization is unfalsifiable, it leans on a vague collective ("everyone"), and it deflates the specific detail that was doing the real work. Let the concrete image land on its own, or end on another concrete detail, never on the moral. If you just told a story and the next sentence starts explaining what it means, cut that sentence.
 
+17. **Break the rule of three.** AI defaults to tricolons: three-item lists and three-beat sentences ("clarity, accountability, and momentum," "clear visual, crisp audio, text," "bold... real... massive"). One or two per piece is fine; when nearly every list and cadence arrives in threes, it's a tell. Use two items, or four, or an uneven sentence. Count your triples.
+
+18. **Don't title-case your examples into brands.** Coining "The Fridge Audit," "The Idea Engine," "The Socratic Study Buddy" packages a real anecdote into a marketing label, and it reads generated. Just tell the example plainly: "one associate photographs her leftovers and asks what to cook."
+
+19. **Take a real stance.** AI defaults to the safe middle, the both-sides non-opinion that offends no one and commits to nothing ("it's about balance," "the truth is nuanced," "there are pros and cons"). A clear position, stated plainly, is one of the most human things a piece can do. If it could have been written by someone who believes the opposite, it hasn't said anything.
+
+20. **Don't reuse a distinctive word or phrase.** Repeating a signature word within a piece ("step change" twice) or across posts ("stuck with me," "left me with more questions") reads mechanical and hardens into a fingerprint. Vary it or cut the second use.
+
 ## Don't over-police (false-positive prevention)
 
 Slop Cop tickets slop, not vocabulary. A word on the banned list is not automatically a crime, context decides. But this section is a scalpel, not a shield, it exists to stop you flagging a banned *word* used literally, never to excuse a slop *structure*. Default skeptical: when a line reads as machine-made, it's slop, even if you can't name the rule.
@@ -76,6 +84,21 @@ Slop Cop tickets slop, not vocabulary. A word on the banned list is not automati
 - **Specificity lowers severity for a word, not for a structure.** "comprehensive audit by the FTC in 2024" is fine, the banned word is anchored to a real entity and date. But concrete nouns do NOT clear a slop structure: a vague-hyperbole hook, a mid-thought fragment, an "X is the point" tic, or an all-negation paragraph is slop even when it's packed with specific detail. This is the most common way slop gets laundered, do not let real names and numbers rescue AI-essay scaffolding. Judge the scaffolding separately from the facts it carries.
 - **Literal beats metaphorical.** "Beethoven's symphony" and "medieval tapestry" are literal and fine. "a symphony of features," "a tapestry of regulations," "a beacon of hope" are slop. Same for ecosystem, landscape, navigate, realm, testament, flag the metaphor, not the literal use.
 - **Keep deliberate voice, but a device is only deliberate once or twice.** A single fragment or one sharp reversal chosen for effect is voice; the same move in every paragraph is a template, and the deliberate-voice exception never applies to a pattern that structures the whole piece (see the second law). Don't let "it lands" launder a device used ten times. If in doubt, count first, then judge.
+
+## De-slopping: plain and human beats clever
+
+When you rewrite to remove slop, the target is plain and human, not polished and not maximally original. There are two failure modes, and the second is the one that bites:
+
+1. **Under-editing:** leaving the slop in.
+2. **Over-editing into cleverness:** "fixing" a line by making it wittier or more novel. This backfires, because manufactured cleverness is itself an AI tell. A crafted, trying-to-be-fresh metaphor ("the code just arrives wrapped in a nice README") reads more like a machine than the tired cliché it replaced ("candy from strangers"). Models are tuned to sound fresh and dodge the most worn phrases, so the novel, composed image is often the more AI-coded choice. A worn cliché said plainly usually reads less like slop than a clever line, because a person reaching for the obvious phrase is exactly what a machine won't do.
+
+So use casual language. Contractions, plain words, the ordinary phrase, a throwaway aside, even a mild cliché are all fine, and usually better than something crafted. Don't polish the humanity out, don't hunt for the unique metaphor. The goal is "a specific person wrote this quickly," not "this is the most original sentence possible."
+
+**This never overrides the rules.** Casual is the tie-breaker, not a license. A rewrite still may not commit any of the crimes above: no reversal-cadence, no fragment stacks, no hyperbole hook, no "actually," no announced insight, no generalizing-aphorism ending. The order is strict. First, break no rule. Then, among the rule-clean options, pick the plainest, most human one. If a casual phrasing would smuggle a tell back in, it loses to a plainer phrasing that doesn't.
+
+**Add one detail only the writer could know.** The highest-leverage humanizing edit: per section, add one concrete first-hand specific, a name, a number, a thing that happened, that a generic writer couldn't produce. Specificity is the strongest antidote to slop. Never invent one, if it isn't in the source, ask for it or leave a bracket.
+
+**Audit your own rewrite before returning it. This is not optional.** Rewrites reintroduce slop constantly, this whole skill was built while its author kept shipping "actually," "Most," and clever metaphors into supposedly de-slopped drafts. After you rewrite, run the Step 1 device tally on your OWN output, and scan specifically for the tics you just removed. Catch them before the reader does, not after.
 
 ## The self-check (run before returning any prose)
 
@@ -103,6 +126,14 @@ When asked to grade prose, rate 1–10 on each dimension and total out of 50. Be
 | Voice | Sounds like a specific human, or anyone/no one? |
 | Density | Anything cuttable still in there? |
 
-Before scoring, run the whole-piece pass from the second law and count the recurring devices. **Pattern density overrides polish.** If one move (negation-reversal, antithesis, punchy fragment, paragraph-ending punchline) appears three or more times, cap Rhythm at 3 and Voice at 4, and the total lands in the 15–25 band no matter how specific or well-crafted the individual lines are. High specificity (real names, numbers, concrete examples) can lift Specificity to 7–8 while the piece as a whole is still slop, don't let one strong dimension rescue a templated piece. A post that reads as prompted-AI "thought leadership" is a fail even when every fact in it is true.
+**Do not score by impression. That is how slop gets a charitable number.** This is the step that keeps failing, the grader reads it, it feels fine, and a 20 becomes a 39. Run the procedure below in order and write the tally down. The tally, not the gut, sets the score.
 
-Report the score, the biggest offense (name the recurring device and count its instances), and the one change that would help most. Book 'em.
+**Step 1, tally the devices.** Go through the piece and literally list every instance of each. Write them out, don't estimate: negation-reversals/antitheses ("not X, it's Y"), tricolons/rule-of-three, fragment stacks and one-line-punch paragraphs, hyperbole/authority hooks, announced insights ("The Insight:"), tic-words (actually/real/the point/fluff), sentence-initial vague quantifiers (Most/Many/Some), generalizing-aphorism endings, repeated words, em dashes.
+
+**Step 2, apply the caps (non-negotiable).** Any single device appearing 3+ times is the signature: cap Rhythm at 3 and Voice at 4. If two or more device classes each hit 3+, cap both at 2. No line reading "well" overrides a cap. This is the exact rationalization the procedure exists to block.
+
+**Step 3, count specificity separately.** Tally the concrete, checkable details: names, numbers, dated facts, specific first-hand examples. This scores on the Specificity axis only. It NEVER lifts a capped axis. A post can be Specificity 8 and still total ~20.
+
+**Step 4, compare to the anchors.** Open [`references/calibration-anchors.md`](references/calibration-anchors.md), find the graded post yours most resembles by device-tally and specificity, and land your total near it. If your gut wants a higher number than the anchor and the tally support, the gut is wrong.
+
+**Step 5, score and report.** Rate the five axes in the table above, total out of 50 (below 35 revises), and report: the device tally, the biggest offense (named device + count), and the one change that helps most. Book 'em.
