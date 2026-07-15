@@ -18,6 +18,12 @@ Slop is writing (or UI, or code) that is technically fine and completely forgett
 
 Two jobs, and know which one a sentence is doing: **humor and relatability drive reach; specificity drives credibility.** Don't sand the personality out while removing the slop. A dry, specific, human sentence beats a polished empty one.
 
+## The second law: judge the whole, not the sentence
+
+Slop hides in aggregate. The most common miss is reading line by line, deciding each sentence "works," and clearing a piece that is slop as a whole. One rhetorical move, the negation-reversal ("X didn't just get harder, it got Y"), the antithesis ("it's not about A, it's about B"), the two-word punch ("One room. Off the record."), can structure an entire post. Each instance lands. The tenth instance is the tell.
+
+So before you clear anything, do a whole-piece pass: **count how many times the same device appears.** Three or more of any one move (negation-reversal, antithesis, punchy fragment, paragraph-ending punchline) means that move is now the signature, and the piece reads as machine-made regardless of how good any single line is. This is the pattern that most reliably separates prompted-AI "thought leadership" from human writing. The whole beats the parts, and a device repeated is not voice, it's a template. When you find this, the fix isn't to polish the lines; it's to break the pattern, keep at most two instances of the strongest device and rewrite the rest into ordinary, varied sentences.
+
 ## Which beat am I on?
 
 Route by what you're delivering. Load only what you need, don't preload everything.
@@ -44,7 +50,7 @@ The prose beat is the main one and the rest of this file covers it. The other tw
 
 7. **Cut hedging.** AI hedges 4–7× more than people. "may potentially," "it seems," "one could argue," "generally." Either it happens or it doesn't, say which. Hedge only where the fact is genuinely disputed or pending. More than three hedges in a paragraph is a red flag.
 
-8. **Vary rhythm. This is the strongest tell now.** Cadence uniformity, sentence after sentence landing at 18–24 words, is the pattern that survives longest across model rewrites and the clearest current signal of machine text. Mix sentence lengths on purpose: some under 8 words, some over 25. Don't let three paragraphs share the same shape or open with the same word. Prefer the surprising-but-right word over the statistically expected one; predictable word choice (low "perplexity") is itself a tell.
+8. **Vary rhythm, and beware manufactured staccato.** Cadence uniformity, sentence after sentence landing at 18–24 words, is one tell. The opposite is just as strong and more common in social posts: relentless short fragments and reversal-endings, where every paragraph builds to a two-word punch or a "not X, it's Y" flip. That is also uniformity, monotony dressed up as punch, and it is the single clearest fingerprint of prompted-AI "thought leadership." "Vary" does not mean alternate short with shorter; it means include some genuinely long, flowing, subordinate-clause sentences that breathe. If you can't find a sentence over 25 words that isn't a list, the rhythm is fake. Prefer the surprising-but-right word over the statistically expected one; predictable word choice (low "perplexity") is itself a tell.
 
 9. **Name real differences.** When you say A differs from B, name the part, version, date, or mechanism that makes it real. If you can't, don't imply the difference exists.
 
@@ -61,7 +67,7 @@ Slop Cop tickets slop, not vocabulary. A word on the banned list is not automati
 - **Exclusion zones, never flag inside:** direct quotes from a cited source, proper names and verbatim titles, or code/markup shown as an example.
 - **Specificity lowers severity.** "a comprehensive examination of the issues" is slop; "comprehensive audit by the FTC in 2024" is fine, it's anchored to a real entity and date.
 - **Literal beats metaphorical.** "Beethoven's symphony" and "medieval tapestry" are literal and fine. "a symphony of features," "a tapestry of regulations," "a beacon of hope" are slop. Same for ecosystem, landscape, navigate, realm, testament, flag the metaphor, not the literal use.
-- **Keep deliberate voice.** If the writer clearly chose a fragment or a repeated opener for effect and it lands, leave it. The goal is human, not sterile.
+- **Keep deliberate voice, but a device is only deliberate once or twice.** A single fragment or one sharp reversal chosen for effect is voice; the same move in every paragraph is a template, and the deliberate-voice exception never applies to a pattern that structures the whole piece (see the second law). Don't let "it lands" launder a device used ten times. If in doubt, count first, then judge.
 
 ## The self-check (run before returning any prose)
 
@@ -89,4 +95,6 @@ When asked to grade prose, rate 1–10 on each dimension and total out of 50. Be
 | Voice | Sounds like a specific human, or anyone/no one? |
 | Density | Anything cuttable still in there? |
 
-Report the score, the biggest offense, and the one change that would help most. Book 'em.
+Before scoring, run the whole-piece pass from the second law and count the recurring devices. **Pattern density overrides polish.** If one move (negation-reversal, antithesis, punchy fragment, paragraph-ending punchline) appears three or more times, cap Rhythm at 3 and Voice at 4, and the total lands in the 15–25 band no matter how specific or well-crafted the individual lines are. High specificity (real names, numbers, concrete examples) can lift Specificity to 7–8 while the piece as a whole is still slop, don't let one strong dimension rescue a templated piece. A post that reads as prompted-AI "thought leadership" is a fail even when every fact in it is true.
+
+Report the score, the biggest offense (name the recurring device and count its instances), and the one change that would help most. Book 'em.

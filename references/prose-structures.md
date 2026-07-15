@@ -65,6 +65,24 @@ Headings describe content; they don't tease it. If it could be a thriller chapte
 
 Self-check: remove "The" from the front of a heading; if it still leans on a dramatic noun pairing, rewrite. A good heading reads like a technical index entry, specific and boring to non-specialists.
 
+## The thought-leader register (the LinkedIn slop stack)
+
+The most common slop in social posts isn't one bad phrase; it's a *register* built by stacking the same few moves until they become the texture of the whole thing. Any one is fine. Three or more and you're reading a template. This is the pattern to judge in aggregate (see "the second law" in SKILL.md), because each line passes on its own.
+
+The recurring moves:
+
+- **Negation-reversal hook:** "Risk didn't just get more complex. It got faster." "This wasn't a strategy problem. It was a courage problem."
+- **Fragment stacks for gravitas:** "One room. Off the record. Two days." "No slides. Hands on a keyboard."
+- **Antithesis / "not about X, it's about Y":** "It was never about being right. It's about being ready." "You don't leave knowing more about us. You leave seeing the world differently."
+- **The everyone-agreed reveal:** "And not one of them said predict. Every one said adapt."
+- **Punchline endings:** every paragraph builds to a short, quotable last line. Individually punchy; in bulk, metronomic.
+- **The "and it wasn't close" tag** and the **"same thing from a different angle"** connective, tics that signal generated cohesion.
+- **Profundity without content:** "the edge was never prediction," "nobody has it all figured out." Sounds deep, names nothing checkable.
+
+**Why it's a tell:** every move is a reversal or a fragment, so the piece has exactly one rhythm, dressed up as variety. Real writing has long, winding, subordinate-clause sentences next to short ones, paragraphs that end quietly, and points stated flat without a flip.
+
+**The fix:** count the moves. Keep the two strongest (usually the real thesis). Rewrite the rest as ordinary declarative sentences, and let at least a few paragraphs end without a punch. Add one genuinely long, breathing sentence. The specificity (real names, numbers, examples) is what you protect; the reversal-cadence is what you cut.
+
 ## Structural and statistical tells
 
 Beyond words, AI text is measurably uniform. Human writing is bursty. As of 2026 this is the strongest signal there is: the classic lexical tells (em dashes, "delve") are now partly trained out, but cadence uniformity survives the longest across model rewrites. Two measures do most of the work: **burstiness** (how much sentence length varies) and **perplexity** (how surprising the word choices are). Humans score high on both; AI scores low.
