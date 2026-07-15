@@ -1,6 +1,6 @@
 # Prose Structures: the patterns, not just the words
 
-Slop hides in shape as much as vocabulary. Clean words in a formulaic structure still read as machine output. State the point directly and vary the shape.
+Slop hides in shape as much as vocabulary. Clean words inside a repeated formula can still feel generic or over-produced. Describe the observable structure; do not treat it as proof of authorship.
 
 ## Binary contrasts
 
@@ -14,7 +14,7 @@ False drama from a telegraphed reversal. State Y directly; drop the negation.
 - "stops being X and starts being Y"
 - "not just X but also Y"
 
-**Threshold:** more than two contrasting parallelisms in a 500-word block is a high-confidence AI tell. **Fix:** "The problem is Y." "Y matters here."
+**Review trigger:** three or more contrast constructions in a short piece usually make the device part of the scaffolding. This is a quality signal, not an authorship test. **Fix:** state Y directly and keep only the contrast that earns its emphasis.
 
 ## Negative listing
 
@@ -45,22 +45,22 @@ Every sentence there is a negation or a binary. Fix: state what IS true in a pla
 
 ## The vague-quantifier subject ("Most X... the ones who")
 
-A sentence that opens with a sweeping quantifier, and often pairs it with a "the ones who/that" predicate. The quantifier does the work a specific fact should, and the pairing is one of the most recognizable AI shapes there is.
+A sentence that opens with a sweeping quantifier and often pairs it with a “the ones who/that” predicate. The quantifier may be doing work that a named population, source, or fact should do.
 
 - "Most companies get this wrong. The ones that succeed start from the problem."
 - "Many leaders think of it as X. The ones who adapt know it's Y."
 - "Some people chase tools. The ones who win rethink the work."
 
-Leading a sentence with **Most, Many, Some, Every, Everyone, Nobody** is a tell on its own, even without the second half. Fix: name the real proportion ("three of Aaron's four largest accounts"), or the specific subject, or drop the quantifier and state the thing directly. This one reappears mid-edit, check the first word of every sentence.
+Leading with **Most, Many, Some, Every, Everyone,** or **Nobody** is not automatically wrong. Ticket it when the population is undefined, the claim is material, or the pattern repeats. Name the proportion or source when available; otherwise narrow the claim.
 
 ## The generalizing-aphorism ending
 
-Capping a specific anecdote with a tidy universal moral. AI can't let a story stand; it reaches for the lesson.
+Capping a specific anecdote with a tidy universal moral that the evidence does not support.
 
 - "She texted the headshot to her friends. When the CEO is the one playing with it, everyone below her starts paying attention." (the second sentence is the tell)
 - "...and the intern shipped it in a weekend. That's what happens when you get out of people's way."
 
-Why it reads as machine: it inflates one instance into a law, leans on a vague collective ("everyone," "people"), and ends on an unfalsifiable claim of impact instead of a fact. Fix: trust the concrete detail, the texted headshot *is* the point. If the sentence after a story begins to explain what the story means, cut it, or replace it with one more specific detail.
+Why it fails: it inflates one instance into a law, leans on a vague collective (“everyone,” “people”), and ends on an unfalsifiable claim. Keep interpretation only when it adds a supportable consequence; otherwise let the detail stand.
 
 ## Rhetorical setups
 
@@ -68,7 +68,7 @@ Announcing insight instead of delivering it. "What if [reframe]?", "Here's what 
 
 ## False agency
 
-Inanimate things doing human verbs, AI loves this because it dodges naming the actor.
+Inanimate subjects are valid when they describe real causation. Ticket them only when the phrasing hides the responsible actor or turns an abstraction into a vague agent.
 
 - "a complaint becomes a fix" → someone fixed it
 - "the decision emerges" → someone decided
@@ -76,7 +76,7 @@ Inanimate things doing human verbs, AI loves this because it dodges naming the a
 - "the data tells us" → someone read it and concluded
 - "the market rewards" → buyers pay for things
 
-Name the human. If no specific person fits, use "you" to put the reader in the seat.
+Name the responsible actor when responsibility matters. Do not force “you” or a human subject when the process, document, market, or data is genuinely the relevant subject.
 
 ## Narrator-from-a-distance
 
@@ -84,11 +84,11 @@ Floating above the scene. "Nobody designed this.", "This happens because...", "P
 
 ## Passive voice
 
-Hides the actor and drains energy. "X was created", "It is believed that", "Mistakes were made", "The decision was reached." Find the actor and put them at the front.
+Passive voice can hide responsibility, but it is valid when the actor is unknown, irrelevant, deliberately withheld, or the receiver is the focus. Ticket it when knowing the actor changes accountability or meaning.
 
 ## Sentence starters to avoid
 
-Wh- openers become a crutch: sentences starting with What, When, Where, Which, Who, Why, How. "What makes this hard is..." → "The constraint is [specific constraint]." Also: paragraphs starting with "So", sentences starting with "Look,".
+Sentence openers become a problem through repetition, not category. Ticket several consecutive paragraphs that begin with the same Wh-word, “So,” “Look,” or the same grammatical frame. Keep an opener that fits the thought.
 
 ## Heading anti-patterns
 
@@ -117,34 +117,39 @@ The recurring moves:
 - **The "and it wasn't close" tag** and the **"same thing from a different angle"** connective, tics that signal generated cohesion.
 - **Profundity without content:** "the edge was never prediction," "nobody has it all figured out." Sounds deep, names nothing checkable.
 
-**Why it's a tell:** every move is a reversal or a fragment, so the piece has exactly one rhythm, dressed up as variety. Real writing has long, winding, subordinate-clause sentences next to short ones, paragraphs that end quietly, and points stated flat without a flip.
+**Why it hurts:** every move is a reversal or fragment, so the piece has one rhythm dressed up as variety. Mix direct statements, explanation, evidence, and occasional emphasis rather than enforcing a new sentence-length formula.
 
 **The fix:** count the moves. Keep the two strongest (usually the real thesis). Rewrite the rest as ordinary declarative sentences, and let at least a few paragraphs end without a punch. Add one genuinely long, breathing sentence. The specificity (real names, numbers, examples) is what you protect; the reversal-cadence is what you cut.
 
-## Structural and statistical tells
+## Repeated layout and cadence patterns
 
-Beyond words, AI text is measurably uniform. Human writing is bursty. As of 2026 this is the strongest signal there is: the classic lexical tells (em dashes, "delve") are now partly trained out, but cadence uniformity survives the longest across model rewrites. Two measures do most of the work: **burstiness** (how much sentence length varies) and **perplexity** (how surprising the word choices are). Humans score high on both; AI scores low.
+Use counts to make a quality judgment reproducible, but avoid fixed statistical
+claims that pretend to identify authorship.
 
-- **Cadence uniformity (the #1 tell):** sentence after sentence landing in the 18–24 word band, paragraph after paragraph, is the clearest current fingerprint of machine text. Break it deliberately.
-- **Paragraph uniformity:** if every paragraph in a section is within ~15% of the others in word count, it reads as generated. Vary length by how much each point actually needs. (Exception: lists and tables are uniform by design.)
-- **Sentence burstiness:** a 500-word block with no sentence under 8 words and none over 30 lacks human rhythm. Mix short punches with long clause-heavy sentences.
-- **Low perplexity:** if every word is the statistically expected next word, the text reads as generated. Reach for the surprising-but-right word, the specific noun, the unexpected verb.
-- **"Not just X, but Y":** LLMs produce roughly one of these per paragraph; humans use it occasionally. More than one per paragraph is a high-confidence tell (see Binary contrasts above).
-- **Transition density:** if more than ~30% of paragraphs open with a transition word or adverbial clause, it's artificial. Cut connectors.
-- **Opening-word repetition:** three or more consecutive paragraphs starting with the same word or pattern signals mechanical generation.
-- **Flat segmental entropy:** AI holds one register from intro to conclusion. Human intros are tighter and declarative; bodies are denser; conclusions shift register. Vary pacing across sections.
+- **Sentence-shape repetition:** several consecutive sentences with the same
+  length, syntax, or landing phrase can feel metronomic. Point to the repeated
+  shape and revise only enough to fit the content.
+- **Paragraph-shape repetition:** repeated claim → explanation → punchline or
+  year → event → impact templates make sections interchangeable.
+- **Transition density:** many paragraphs opening with explicit connectors can
+  make cohesion feel manufactured. Remove connectors that do not clarify a real
+  relationship.
+- **Opening-word repetition:** three or more consecutive paragraphs beginning
+  with the same word or grammatical frame deserves review.
+- **Formatting density:** repeated bold phrases, checkmarks, emojis, colons,
+  parentheses, or one-line paragraphs can create a template even when each
+  device is acceptable alone.
+- **Register uniformity:** a piece that never changes pace between setup,
+  evidence, explanation, and conclusion may need restructuring. Do not require
+  a specific number of short or long sentences.
 
-## Repetitive layouts (structural slop)
+Three sections built from an identical template are generic even when every fact
+is true. Vary paragraph count, evidence order, and openings only when the
+content warrants it; visual randomness is not the goal.
 
-Three sections built from an identical template read as machine output even when each fact is true.
+## Do not use model-family fingerprints
 
-- WRONG: three sections all shaped "In [year], [party] did [thing]. This affected [number]. [Party] responded by [action]."
-- RIGHT: section one is a two-paragraph narrative with timeline; section two is a two-sentence summary because it's thinly documented; section three opens with the party's justification, then the contradicting evidence.
-
-Vary paragraph count, sentence rhythm, and how each section opens.
-
-## Model-family fingerprints (for reference)
-
-- **GPT-family:** heavy bullet lists, staccato "It's not X. It's Y." contrasts, rhetorical colons ("Here's the thing:", "The bottom line:"), over-numbered steps.
-- **Claude-family:** better sentence variation but flat entropy, conciliatory transitions ("That said", "To be fair", "It's worth considering"), poetic words ("nuanced," "complexities"), diplomatic hedging on documented facts.
-- **All models:** uniform paragraphs, predictable section order (Background → Details → Impact → Response), citations clustered at paragraph ends, excessive boldface on concepts and product names.
+Do not maintain lists claiming that a punctuation mark, word, paragraph length,
+or rhetorical move identifies a particular model family. Models, prompts,
+languages, and editing practices change. Ticket the observable quality problem
+and cite current research only when making a broader empirical claim.

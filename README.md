@@ -53,11 +53,11 @@ The scoring is a forced procedure, not a gut call. It tallies every rhetorical d
 
 **Claude Code**
 ```bash
-git clone https://github.com/howshannon/slopcop
-cp -R slopcop ~/.claude/skills/
+git clone https://github.com/howshannon/slop-cop
+cp -R slop-cop ~/.claude/skills/
 ```
 
-**Claude Desktop / Cowork / claude.ai** — open Settings → Capabilities (or Skills) and add or upload the skill. You can also zip the folder as `slopcop.skill` and use the Save-skill button.
+**Claude Desktop / Cowork / claude.ai** — open Settings → Capabilities (or Skills) and add or upload the skill. You can also zip the folder as `slop-cop.skill` and use the Save-skill button.
 
 **Custom instructions / API** — paste the core rules from `SKILL.md` into your system prompt; the reference files load on demand.
 

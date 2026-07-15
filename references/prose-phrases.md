@@ -123,7 +123,7 @@ AI reaches for longer Latin-derived words where a plain one is clearer and more 
 | implement | build, do, add |
 | leverage | use |
 
-The point isn't that long words are banned; it's that AI defaults to them and humans usually don't. If the short word carries the meaning, use it.
+Long words are not banned. Prefer the shorter word when it is more natural for the audience and preserves the technical meaning.
 
 ## Transitions and connectors
 
@@ -146,20 +146,20 @@ The point isn't that long words are banned; it's that AI defaults to them and hu
 
 ## Inflated symbolism phrases
 
-These appear far more often in AI text than human writing (corpus analysis). High-confidence tells:
+These phrases often inflate importance without adding evidence. Review them in context:
 
 "provide a valuable insight", "left an indelible mark", "play a significant role in shaping", "an unwavering commitment", "open a new avenue", "a stark reminder", "gain a comprehensive understanding", "serves as a testament", "watershed moment", "deeply rooted".
 
 ## Hedging markers
 
-AI hedges 4–7× more than humans. Thin these unless the fact is genuinely disputed or pending.
+Thin stacked or empty hedges. Preserve uncertainty when the evidence, domain, or forecast requires it.
 
 Modals: may, might, could, potentially. Cognitive verbs: I think, I believe, it seems, it appears. Limiters: probably, generally, usually, arguably, likely. Uncertainty: unclear, remains to be seen, further research is needed. Phrases: "It is worth noting that", "It should be noted that", "One could argue that", "While X, Y remains", "It is widely acknowledged that".
 
-Human hedging grounds uncertainty in evidence ("the FTC's 2024 data suggests a 12% increase"); AI hedging blankets established facts. Keep the former, cut the latter.
+Good hedging states why certainty is limited (“the FTC’s 2024 data suggests a 12% increase”). Empty hedging blankets a settled fact without naming the uncertainty. Keep the former; revise the latter.
 
 ## Hallucinated markup artifacts: zero tolerance
 
-Any occurrence means text was pasted from a chatbot without editing. Remove every one:
+These tokens are usually internal tool or citation artifacts. Remove them unless they appear inside a quotation or example being discussed:
 
 `oaicite`, `contentReference`, `turn0search0`, `grok_card`, `attributableIndex`.
