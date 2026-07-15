@@ -1,42 +1,99 @@
-# Slop Cop 🚓
+<p align="center">
+  <img src="assets/hero.png" alt="Slop Cop — catches AI slop in prose, design, and code before it reaches a human" width="100%">
+</p>
 
-Catch and remove AI slop from prose, UI/design, and code, before it reaches a human.
+<h1 align="center">Slop Cop 🚓</h1>
 
-Slop is work that's technically fine and completely forgettable: the machine's default register. It reads smooth, says little, and could have come from anyone or no one. Slop Cop patrols three beats and issues a fix, not just a ticket.
+<p align="center">
+  <b>Catch and remove AI slop from prose, design, and code, before it reaches a human.</b><br>
+  It reads your draft the way an editor who has seen every ChatGPT tell would, tickets the slop, and hands back the fix, not just the citation.
+</p>
+
+<p align="center">
+  <img alt="license: MIT" src="https://img.shields.io/badge/license-MIT-141414">
+  <img alt="beats: prose · design · code" src="https://img.shields.io/badge/beats-prose%20%C2%B7%20design%20%C2%B7%20code-F2C230">
+  <img alt="works with: Claude, Codex, Cursor" src="https://img.shields.io/badge/agents-Claude%20%C2%B7%20Codex%20%C2%B7%20Cursor-141414">
+</p>
+
+---
+
+## Why use it
+
+AI-generated prose, interfaces, and code tend to fail the same way: technically fine, completely generic. Smooth sentences that say little. A landing page that looks like every other landing page. Code that handles the happy path and nothing else. None of it is broken, so it ships, and it quietly makes everything sound like it came from no one in particular.
+
+Slop Cop catches that layer before a reader sees it. It finds the machine's default register and replaces the vague, forgettable version with something a specific person would have written.
+
+## How it works
+
+Slop Cop patrols three beats and loads only the one your work needs.
+
+**Prose** — cadence uniformity (the strongest tell as of 2026), filler openers, overused verbs and Latinate word choice, hedging, formulaic "not X, it's Y" structures, vague claims of importance, thriller-chapter headings, and pasted markup artifacts like `oaicite` and `turn0search0`. The em dash is treated as a weak, dated signal now, judged on density rather than presence.
+
+**Design** — the cluster of untouched defaults: the indigo-to-violet gradient, Inter everywhere, the fits-anyone hero headline, three equal feature cards, motion with no purpose, plastic AI imagery, and buzzword copy with no proof behind it.
+
+**Code** — happy-path-only logic with no config or edge cases, over-documentation of the obvious, ceremonial long names, over-modular structure, dead imports, and abstractions that don't earn their keep.
+
+It routes automatically based on what you're delivering.
 
 ## The one law
 
-**Replace the vague claim with a specific, checkable thing.** Under almost every fix here is the same move: name the number, the person, the date, the mechanism, the actual component. If you strip a slop phrase and have nothing concrete to put in its place, that sentence had nothing to say, cut it.
+**Replace the vague claim with a specific, checkable thing.** Under almost every fix is the same move: name the number, the person, the date, the mechanism, the actual component. If you strip a slop phrase and have nothing concrete to put in its place, that sentence had nothing to say. Cut it.
 
-## Three beats
+## What keeps it from over-policing
 
-- **Prose**, cadence uniformity (the #1 tell as of 2026), filler openers, overused verbs/adjectives, Latinate bias, hedging, formulaic structure, vague claims of importance, dramatic headings, hallucinated markup artifacts (`oaicite`, `turn0search0`), and the em dash (now a weaker, dated signal, density over presence).
-- **Design**, the cluster of untouched defaults: the indigo-to-violet gradient, Inter everywhere, the fits-anyone hero headline, three equal cards, purposeless motion, plastic AI imagery, no real proof, buzzword soup, emoji bullets, boilerplate meta.
-- **Code**, happy-path-only code with no config/logging/edge cases, over-documentation of the obvious, ceremonial over-long names, sterilized over-modular structure, dead/unused imports, duplication, plus vague names and abstractions that don't earn their keep.
+A word on the banned list isn't automatically a crime. Slop Cop respects exclusion zones (quotes, proper names, code examples), lowers severity when a word is anchored to a specific entity or date, and separates literal uses ("Beethoven's symphony") from metaphorical slop ("a symphony of features"). The target is human, not sterile.
 
-It routes automatically based on what you're delivering, and loads only the beat it needs.
+## How it grades
 
-## What makes it not over-police
+Ask it to grade and it returns a score out of 50 across Directness, Specificity, Rhythm, Voice, and Density. Below 35 means revise.
 
-A word on the banned list isn't automatically a crime. Slop Cop respects exclusion zones (quotes, proper names, code examples), lowers severity when a word is anchored to a specific entity or date, and distinguishes literal uses ("Beethoven's symphony") from metaphorical slop ("a symphony of features"). The goal is human, not sterile.
+The scoring is a forced procedure, not a gut call. It tallies every rhetorical device by count, caps the Rhythm and Voice axes when any single device shows up three or more times, counts specificity separately so real facts can't paper over a templated structure, checks the result against a set of calibration anchors, and reports the tally, the biggest offense, and the one change that helps most.
 
 ## Install
 
-**Claude Code / Cowork:** add this folder as a skill, or install the `.skill` file.
+**Claude Code**
+```bash
+git clone https://github.com/howshannon/slopcop
+cp -R slopcop ~/.claude/skills/
+```
 
-**Claude Projects:** upload `SKILL.md` and the `references/` folder to project knowledge.
+**Claude Desktop / Cowork / claude.ai** — open Settings → Capabilities (or Skills) and add or upload the skill. You can also zip the folder as `slopcop.skill` and use the Save-skill button.
 
-**Custom instructions / API:** paste the core rules from `SKILL.md` into your system prompt; the reference files load on demand.
+**Custom instructions / API** — paste the core rules from `SKILL.md` into your system prompt; the reference files load on demand.
 
-## Usage
+## How to use it
 
-It triggers on its own before delivering drafted prose, a landing page, a component, or code. You can also call it directly: "run Slop Cop on this," "de-slop this post," "grade this draft," "does this sound like ChatGPT?"
+**It runs on its own** before it hands you drafted prose, a landing page, a component, or code. You can also call it directly, any of these ways:
 
-Ask it to grade and it returns a score out of 50 across Directness, Specificity, Rhythm, Voice, and Density. Below 35: revise.
+**De-slop a draft.** Paste the text or point at the file and say *"run Slop Cop on this,"* *"de-slop this post,"* or *"does this sound like ChatGPT?"* It returns the cleaned version and a short list of what it changed and why.
+
+**Grade before you ship.** Say *"grade this draft."* You get the score out of 50, the device tally, and the top fix. Under 35, revise and re-run until it clears.
+
+**Check a design.** Paste the HTML or JSX, or describe the page, and ask it to work the design beat. It flags the generic-SaaS tells and names specific replacements.
+
+**Review code.** Point it at a diff or a file and ask for the code beat. It surfaces happy-path gaps, over-documentation, and abstractions that don't carry their weight.
+
+Best practice: run it on anything you wrote that a human will read, and treat the score as a gate, not a grade to admire.
+
+## What's in here
+
+```
+slopcop/
+├── SKILL.md                     the rules and the forced scoring procedure
+├── references/
+│   ├── prose-phrases.md         banned verbs, adjectives, filler openers, plain swaps
+│   ├── prose-structures.md      formulaic structures to break
+│   ├── prose-examples.md        before / after rewrites
+│   ├── design.md                generated-UI tells and their fixes
+│   ├── code.md                  LLM code smells and their fixes
+│   └── calibration-anchors.md   graded example posts for consistent scoring
+├── README.md
+└── LICENSE
+```
 
 ## Credits
 
-Synthesized and de-conflicted from a set of excellent open-source anti-slop projects: stop-slop (Hardik Pandya), slopless (seochecks.ai), hallmark (Nutlope), taste-skill (Leonxlnx), desloppify (Peter O'Malley), and the Rossmann Group no-AI-slop writing rules. The design and code beats were hardened with current research on generated-UI tells (the 50ms credibility judgment, the indigo-gradient / Inter cluster) and LLM code smells (happy-path scope, over-documentation, higher smell density on complex tasks), and the prose beat was updated for the 2026 landscape where the em dash is a fading tell and cadence uniformity is the strongest signal. It adds a false-positive-prevention layer so it tickets slop, not vocabulary.
+Slop Cop synthesizes and de-conflicts several open-source anti-slop projects, hardened with current research on AI writing, generated-UI, and LLM code tells. Full attributions and sources are in [CREDITS.md](CREDITS.md).
 
 ## License
 
