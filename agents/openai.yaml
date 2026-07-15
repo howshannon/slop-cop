@@ -1,0 +1,12 @@
+interface:
+  display_name: "Slop Cop"
+  short_description: "Audit and fix generic AI-slop patterns."
+  icon_small: "./assets/brand/slop-cop-emblem.png"
+  icon_large: "./assets/brand/slop-cop-emblem.png"
+  brand_color: "#FF2E88"
+  default_prompt: >-
+    Run Slop Cop on this material. Return the verdict, score or severity,
+    evidence tally, biggest offense, highest-impact fix, and revised version.
+
+policy:
+  allow_implicit_invocation: true
