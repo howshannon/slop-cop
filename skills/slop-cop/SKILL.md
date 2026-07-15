@@ -11,7 +11,7 @@ license: MIT
 compatibility: Works in Agent Skills-compatible environments that support Markdown references.
 metadata:
   author: howshannon
-  version: "0.2.0"
+  version: "0.3.0"
 ---
 
 # Slop Cop

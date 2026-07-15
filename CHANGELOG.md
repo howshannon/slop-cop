@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.3.0
+
+- Published the skill through the standard `skills/slop-cop/` layout.
+- Added skills.sh installation commands for Codex, Claude Code, Cursor, and GitHub Copilot.
+- Reframed the README around observable quality rather than authorship detection.
+- Corrected the documented repository structure and invocation behavior.
+- Added the zero-tolerance prose rule and refreshed public documentation.
+
 ## 0.2.0 — proposed hardening release
 
 - Moved the skill into `skills/slop-cop/` so its parent directory matches its
