@@ -60,12 +60,16 @@ The prose beat is the main one and the rest of this file covers it. The other tw
 
 12. **Zero-tolerance markup artifacts.** `oaicite`, `contentReference`, `turn0search0`, `grok_card`, `attributableIndex` are pasted-from-a-chatbot fingerprints. Any occurrence means unedited AI output. Remove on sight.
 
+13. **Kill the vague-hyperbole hook.** Openers that stake a brave-contrarian claim on an unfalsifiable "most": "most AI demos are afraid to do this," "most teams get this wrong," "here's what nobody tells you," "what they don't teach you," "everyone is doing X wrong," and sweeping industry verdicts ("the AI industry has been hiding"). They manufacture authority without evidence, and they're one of the loudest slop tells there is. Name the specific who, or drop the frame and open on the concrete thing that happened. This holds even when the rest of the post is specific, the hook is slop on its own.
+
+14. **Cut tic-words used for emphasis: "real," "the point," "actually," "fluff."** "Real robotic arms," "a real step change," "the real work" (where nothing fake is being contrasted); "that's the point," "the bad output is the point" (manufactured thesis); "what it actually looks like." These are verbal tics that signal AI-essay cadence. If "real" isn't separating the thing from a fake version, cut it. If "X is the point" isn't the literal subject of a debate, state the point instead of announcing that you're about to.
+
 ## Don't over-police (false-positive prevention)
 
-Slop Cop tickets slop, not vocabulary. A word on the banned list is not automatically a crime, context decides.
+Slop Cop tickets slop, not vocabulary. A word on the banned list is not automatically a crime, context decides. But this section is a scalpel, not a shield, it exists to stop you flagging a banned *word* used literally, never to excuse a slop *structure*. Default skeptical: when a line reads as machine-made, it's slop, even if you can't name the rule.
 
 - **Exclusion zones, never flag inside:** direct quotes from a cited source, proper names and verbatim titles, or code/markup shown as an example.
-- **Specificity lowers severity.** "a comprehensive examination of the issues" is slop; "comprehensive audit by the FTC in 2024" is fine, it's anchored to a real entity and date.
+- **Specificity lowers severity for a word, not for a structure.** "comprehensive audit by the FTC in 2024" is fine, the banned word is anchored to a real entity and date. But concrete nouns do NOT clear a slop structure: a vague-hyperbole hook, a mid-thought fragment, an "X is the point" tic, or an all-negation paragraph is slop even when it's packed with specific detail. This is the most common way slop gets laundered, do not let real names and numbers rescue AI-essay scaffolding. Judge the scaffolding separately from the facts it carries.
 - **Literal beats metaphorical.** "Beethoven's symphony" and "medieval tapestry" are literal and fine. "a symphony of features," "a tapestry of regulations," "a beacon of hope" are slop. Same for ecosystem, landscape, navigate, realm, testament, flag the metaphor, not the literal use.
 - **Keep deliberate voice, but a device is only deliberate once or twice.** A single fragment or one sharp reversal chosen for effect is voice; the same move in every paragraph is a template, and the deliberate-voice exception never applies to a pattern that structures the whole piece (see the second law). Don't let "it lands" launder a device used ten times. If in doubt, count first, then judge.
 

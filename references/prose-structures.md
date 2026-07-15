@@ -24,6 +24,25 @@ Listing what something is *not* before revealing what it *is*, a rhetorical stri
 
 Sentence fragments for manufactured profundity. "[Noun]. That's it. That's the [thing].", "X. And Y. And Z.", "This unlocks something. [Word]." Write complete sentences and trust the content.
 
+## Mid-thought fragments (appositives dressed as sentences)
+
+A dependent clause or appositive split off with a period so it reads as a punchy standalone line. It has no subject doing anything, it's the tail of the previous sentence wearing a full stop. A strong, common slop tell.
+
+- "The kind that move and draw and leave a mark you can pick up." (tail of "robotic arms")
+- "Self-referential. Harder to follow." (adjectives posing as sentences)
+- "Which is exactly why I want to talk about it." / "Which raises a question." (Wh- fragment openers)
+- "No slides. Hands on a keyboard." (noun phrases as sentences)
+
+Fix: rejoin them to the sentence they belong to, or give them a subject and a verb. One deliberate fragment for effect is voice; a stack of them is manufactured rhythm.
+
+## All-negative framing
+
+A passage built entirely from what things are NOT, or from binary "X or it doesn't" constructions, with no forward statement. Even concrete negatives pile into slop, the reader gets a wall of negation and no plain claim.
+
+- "Robots embarrass that whole posture. The arm moves or it doesn't. The line is on the page or it isn't. There's no charitable interpretation, no 'well, it's a first draft.' Either the prompt produced the thing or it came out wrong."
+
+Every sentence there is a negation or a binary. Fix: state what IS true in a plain declarative, then let one contrast land if you need it. If a paragraph never says what something *is*, only what it isn't, rewrite it.
+
 ## Rhetorical setups
 
 Announcing insight instead of delivering it. "What if [reframe]?", "Here's what I mean:", "Think about it:", "And that's okay." Make the point; let readers draw the conclusion.

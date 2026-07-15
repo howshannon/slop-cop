@@ -83,3 +83,26 @@ Count the negation-reversals and antitheses: seven-plus in one post, plus fragme
 - Fix: keep the two strongest reversals (the predict-vs-adapt line and the closing thesis, they *are* the argument), rewrite the other five as plain statements, let three paragraphs end without a punch, and add one long breathing sentence. Protect the names and concrete examples; cut the reversal-cadence.
 
 **The lesson:** never clear a piece sentence by sentence. Count the recurring device first. Three or more of one move and the piece is templated no matter how good each line reads.
+
+## 13. Concrete nouns don't clear slop scaffolding (the laundering trap)
+
+The most seductive miss. A post is full of specific, vivid, checkable detail, so it feels human, and the reviewer clears it. But the scaffolding holding the detail together is pure AI-essay: a hyperbole hook, mid-thought fragments, "X is the point," an all-negation paragraph. The facts are real; the frame is slop.
+
+- Before (a real event-recap post, condensed):
+  > "We did something at [Firm] that most AI demos are afraid to do. We let people prompt robots. Real robotic arms. The kind that move and draw and leave a mark you can pick up. [...] The bad output is the point. [...] Robots embarrass that whole posture. The arm moves or it doesn't. The line is on the page or it isn't. Either the prompt produced the thing or it came out wrong. [...] Our clients aren't running chat windows. They're running plants, fleets, warehouses. [...] I left with more questions than I had going in."
+
+What's genuinely good and worth keeping: "a wobbly city that looked like a wiring diagram," "we've sold them a screensaver," the specific bad-art examples. Real, vivid, human.
+
+What's slop, regardless of that specificity:
+- **Hyperbole hook:** "most AI demos are afraid to do."
+- **"real" as filler:** "Real robotic arms."
+- **Mid-thought fragment:** "The kind that move and draw and leave a mark you can pick up."
+- **"X is the point":** "The bad output is the point."
+- **All-negation paragraph:** the entire "Robots embarrass that whole posture…" block.
+- **Recurring personal tic:** "I left with more questions than I had going in" (reused from an earlier post).
+
+Diagnosis: Specificity is genuinely high (7), but Directness (5), Rhythm (3), Voice (4), and Density (4) all suffer because the frame is machine-made. Total ~23/50. Slop.
+
+The fix keeps the wiring-diagram city, the depressed Wednesday portrait, and the screensaver line, and rewrites the scaffolding: drop the hook and open on the robots, rejoin the fragments, cut "real" and "is the point," and turn the all-negation paragraph into a plain statement of what the physical test exposed.
+
+**The lesson:** judge the scaffolding separately from the facts. Specificity earns points on the Specificity axis only. It never clears a hook, a fragment, a tic, or a negation-wall.
