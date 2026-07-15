@@ -43,6 +43,25 @@ A passage built entirely from what things are NOT, or from binary "X or it doesn
 
 Every sentence there is a negation or a binary. Fix: state what IS true in a plain declarative, then let one contrast land if you need it. If a paragraph never says what something *is*, only what it isn't, rewrite it.
 
+## The vague-quantifier subject ("Most X... the ones who")
+
+A sentence that opens with a sweeping quantifier, and often pairs it with a "the ones who/that" predicate. The quantifier does the work a specific fact should, and the pairing is one of the most recognizable AI shapes there is.
+
+- "Most companies get this wrong. The ones that succeed start from the problem."
+- "Many leaders think of it as X. The ones who adapt know it's Y."
+- "Some people chase tools. The ones who win rethink the work."
+
+Leading a sentence with **Most, Many, Some, Every, Everyone, Nobody** is a tell on its own, even without the second half. Fix: name the real proportion ("three of Aaron's four largest accounts"), or the specific subject, or drop the quantifier and state the thing directly. This one reappears mid-edit, check the first word of every sentence.
+
+## The generalizing-aphorism ending
+
+Capping a specific anecdote with a tidy universal moral. AI can't let a story stand; it reaches for the lesson.
+
+- "She texted the headshot to her friends. When the CEO is the one playing with it, everyone below her starts paying attention." (the second sentence is the tell)
+- "...and the intern shipped it in a weekend. That's what happens when you get out of people's way."
+
+Why it reads as machine: it inflates one instance into a law, leans on a vague collective ("everyone," "people"), and ends on an unfalsifiable claim of impact instead of a fact. Fix: trust the concrete detail, the texted headshot *is* the point. If the sentence after a story begins to explain what the story means, cut it, or replace it with one more specific detail.
+
 ## Rhetorical setups
 
 Announcing insight instead of delivering it. "What if [reframe]?", "Here's what I mean:", "Think about it:", "And that's okay." Make the point; let readers draw the conclusion.

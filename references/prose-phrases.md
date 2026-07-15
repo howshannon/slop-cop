@@ -37,7 +37,7 @@ Words that add emphasis, not meaning. They're verbal tics that signal AI-essay c
 
 - **"real"** when nothing fake is being contrasted: "Real robotic arms," "a real step change," "the real work," "real talk." If it isn't separating the thing from a counterfeit, cut it.
 - **"X is the point" / "that's the point"** as a manufactured thesis ("the bad output is the point"). State the point; don't announce that you're about to.
-- **"actually"** as intensifier: "what it actually looks like," "would actually survive." Almost always cuttable.
+- **"actually"** as intensifier: "what it actually looks like," "would actually survive," "actually uses it." Pure filler almost every time, cut on sight. It slips past careful editors, so hunt it specifically.
 - **"fluff," "genuinely," "literally"** when used for emphasis rather than meaning.
 
 ## Throat-clearing openers
