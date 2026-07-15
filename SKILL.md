@@ -22,6 +22,8 @@ proof of AI authorship.
 
 ## Non-negotiable boundaries
 
+**Zero-tolerance word: `quietly`.** Never introduce or retain this word in prose. Delete it or replace it with the specific action, mechanism, condition, or observable consequence. This rule has no contextual exceptions.
+
 1. **Quality, not detection.** Say “generic,” “formulaic,” “unsupported,” or
    “repetitive.” Never conclude that text, UI, or code was AI-generated from
    style alone.
