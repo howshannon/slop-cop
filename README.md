@@ -6,8 +6,8 @@
 <h1 align="center">Slop Cop 🚓</h1>
 
 <p align="center">
-  <b>Catch and remove AI slop from prose, design, and code, before it reaches a human.</b><br>
-  It reads your draft the way an editor who has seen every ChatGPT tell would, tickets the slop, and hands back the fix, not just the citation.
+  <b>Catch and remove AI slop from prose, design, and code before it reaches a human.</b><br>
+  It reads your draft the way an editor who has seen every ChatGPT tell would, tickets each problem, and hands back a fix for it.
 </p>
 
 <p align="center">
@@ -20,35 +20,35 @@
 
 ## Why use it
 
-AI-generated prose, interfaces, and code tend to fail the same way: technically fine, completely generic. Smooth sentences that say little. A landing page that looks like every other landing page. Code that handles the happy path and nothing else. None of it is broken, so it ships, and it quietly makes everything sound like it came from no one in particular.
+AI-generated prose, interfaces, and code tend to fail the same way: they come out generic. The sentences are smooth but say little, the landing page looks like every other landing page, and the code handles the happy path and nothing else. None of it is broken, so it ships, and it quietly makes everything sound like it came from no one in particular.
 
-Slop Cop catches that layer before a reader sees it. It finds the machine's default register and replaces the vague, forgettable version with something a specific person would have written.
+Slop Cop catches that layer before a reader sees it. It finds the machine's default register and replaces the vague version with something a specific person would have written.
 
 ## How it works
 
 Slop Cop patrols three beats and loads only the one your work needs.
 
-**Prose** — cadence uniformity (the strongest tell as of 2026), filler openers, overused verbs and Latinate word choice, hedging, formulaic "not X, it's Y" structures, vague claims of importance, thriller-chapter headings, and pasted markup artifacts like `oaicite` and `turn0search0`. The em dash is treated as a weak, dated signal now, judged on density rather than presence.
+**Prose.** Cadence uniformity (the strongest tell as of 2026), filler openers, overused verbs and Latinate word choice, hedging, formulaic "not X, it's Y" structures, vague claims of importance, thriller-chapter headings, and pasted markup artifacts like `oaicite` and `turn0search0`. The em dash is treated as a weak, dated signal, flagged only when its density runs high.
 
-**Design** — the cluster of untouched defaults: the indigo-to-violet gradient, Inter everywhere, the fits-anyone hero headline, three equal feature cards, motion with no purpose, plastic AI imagery, and buzzword copy with no proof behind it.
+**Design.** The cluster of untouched defaults: the indigo-to-violet gradient, Inter everywhere, the fits-anyone hero headline, three equal feature cards, motion with no purpose, plastic AI imagery, and buzzword copy with no proof behind it.
 
-**Code** — happy-path-only logic with no config or edge cases, over-documentation of the obvious, ceremonial long names, over-modular structure, dead imports, and abstractions that don't earn their keep.
+**Code.** Happy-path-only logic with no config or edge cases, over-documentation of the obvious, ceremonial long names, over-modular structure, dead imports, and abstractions that don't earn their keep.
 
 It routes automatically based on what you're delivering.
 
 ## The one law
 
-**Replace the vague claim with a specific, checkable thing.** Under almost every fix is the same move: name the number, the person, the date, the mechanism, the actual component. If you strip a slop phrase and have nothing concrete to put in its place, that sentence had nothing to say. Cut it.
+**Replace the vague claim with a specific, checkable thing.** Under almost every fix is the same move: name the number, the person, the date, the mechanism, the actual component. If you strip a slop phrase and have nothing concrete to put in its place, that sentence had nothing to say, so cut it.
 
 ## What keeps it from over-policing
 
-A word on the banned list isn't automatically a crime. Slop Cop respects exclusion zones (quotes, proper names, code examples), lowers severity when a word is anchored to a specific entity or date, and separates literal uses ("Beethoven's symphony") from metaphorical slop ("a symphony of features"). The target is human, not sterile.
+A word on the banned list isn't automatically a crime. Slop Cop respects exclusion zones (quotes, proper names, code examples), lowers severity when a word is anchored to a specific entity or date, and separates literal uses ("Beethoven's symphony") from metaphorical slop ("a symphony of features"). The goal is writing that still sounds like a person.
 
 ## How it grades
 
 Ask it to grade and it returns a score out of 50 across Directness, Specificity, Rhythm, Voice, and Density. Below 35 means revise.
 
-The scoring is a forced procedure, not a gut call. It tallies every rhetorical device by count, caps the Rhythm and Voice axes when any single device shows up three or more times, counts specificity separately so real facts can't paper over a templated structure, checks the result against a set of calibration anchors, and reports the tally, the biggest offense, and the one change that helps most.
+The scoring follows a fixed procedure. It tallies every rhetorical device by count, caps the Rhythm and Voice axes when any single device shows up three or more times, counts specificity separately so real facts can't paper over a templated structure, checks the result against a set of calibration anchors, and reports the tally, the biggest offense, and the highest-leverage change.
 
 ## Install
 
@@ -58,9 +58,9 @@ git clone https://github.com/howshannon/slop-cop
 cp -R slop-cop ~/.claude/skills/
 ```
 
-**Claude Desktop / Cowork / claude.ai** — open Settings → Capabilities (or Skills) and add or upload the skill. You can also zip the folder as `slop-cop.skill` and use the Save-skill button.
+**Claude Desktop / Cowork / claude.ai:** open Settings → Capabilities (or Skills) and add or upload the skill. You can also zip the folder as `slop-cop.skill` and use the Save-skill button.
 
-**Custom instructions / API** — paste the core rules from `SKILL.md` into your system prompt; the reference files load on demand.
+**Custom instructions / API:** paste the core rules from `SKILL.md` into your system prompt; the reference files load on demand.
 
 ## How to use it
 
@@ -74,7 +74,7 @@ cp -R slop-cop ~/.claude/skills/
 
 **Review code.** Point it at a diff or a file and ask for the code beat. It surfaces happy-path gaps, over-documentation, and abstractions that don't carry their weight.
 
-Best practice: run it on anything you wrote that a human will read, and treat the score as a gate, not a grade to admire.
+Best practice: run it on anything a human will read, and treat the score as a gate to clear before shipping.
 
 ## What's in here
 
