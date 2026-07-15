@@ -1,6 +1,6 @@
 <!-- slop-cop-brand:hero:start -->
 <p align="center">
- <img src="assets/brand/slop-cop-hero.png" alt="Slop Cop: Book the clichés. Keep the voice." width="100%">
+ <img src="skills/slop-cop/assets/brand/slop-cop-hero.png" alt="Slop Cop: Book the clichés. Keep the voice." width="100%">
 </p>
 <!-- slop-cop-brand:hero:end -->
 <h1 align="center">Slop Cop 🚓</h1>
@@ -52,15 +52,43 @@ The scoring follows a fixed procedure. It tallies every rhetorical device by cou
 
 ## Install
 
-**Claude Code**
+### Skills CLI
+
+Install Slop Cop from its public GitHub repository:
+
 ```bash
-git clone https://github.com/howshannon/slop-cop
-cp -R slop-cop ~/.claude/skills/
+npx -y skills add howshannon/slop-cop --skill slop-cop
 ```
 
-**Claude Desktop / Cowork / claude.ai:** open Settings → Capabilities (or Skills) and add or upload the skill. You can also zip the folder as `slop-cop.skill` and use the Save-skill button.
+### Codex
 
-**Custom instructions / API:** paste the core rules from `SKILL.md` into your system prompt; the reference files load on demand.
+```bash
+gh skill install howshannon/slop-cop slop-cop --agent codex --scope user
+```
+
+Invoke it explicitly in Codex with:
+
+```text
+$slop-cop
+```
+
+### Claude Code
+
+```bash
+gh skill install howshannon/slop-cop slop-cop --agent claude-code --scope user
+```
+
+### Cursor
+
+```bash
+gh skill install howshannon/slop-cop slop-cop --agent cursor --scope user
+```
+
+### GitHub Copilot
+
+```bash
+gh skill install howshannon/slop-cop slop-cop --agent github-copilot --scope user
+```
 
 ## How to use it
 
@@ -81,7 +109,7 @@ Best practice: run it on anything a human will read, and treat the score as a ga
 ```
 slop-cop/
 ├── SKILL.md the rules and the forced scoring procedure
-├── references/
+├── skills/slop-cop/references/
 │ ├── prose-phrases.md banned verbs, adjectives, filler openers, plain swaps
 │ ├── prose-structures.md formulaic structures to break
 │ ├── prose-examples.md before / after rewrites
@@ -105,7 +133,7 @@ MIT.
 
 <!-- slop-cop-brand:outcomes:start -->
 <p align="center">
- <img src="assets/brand/slop-cop-status-badges.png" alt="Slop Cop outcomes: Pass, Revise, and Booked" width="900">
+ <img src="skills/slop-cop/assets/brand/slop-cop-status-badges.png" alt="Slop Cop outcomes: Pass, Revise, and Booked" width="900">
 </p>
 <!-- slop-cop-brand:outcomes:end -->
 
@@ -116,16 +144,16 @@ MIT.
 <br>
 
 <p align="center">
- <img src="assets/brand/slop-cop-wordmark.png" alt="Slop Cop wordmark" width="850">
+ <img src="skills/slop-cop/assets/brand/slop-cop-wordmark.png" alt="Slop Cop wordmark" width="850">
 </p>
 
 <table>
  <tr>
  <td width="34%" align="center">
- <img src="assets/brand/slop-cop-emblem.png" alt="Slop Cop clipboard emblem" width="280">
+ <img src="skills/slop-cop/assets/brand/slop-cop-emblem.png" alt="Slop Cop clipboard emblem" width="280">
  </td>
  <td width="66%" align="center">
- <img src="assets/brand/slop-cop-social-card.png" alt="Slop Cop social card" width="600">
+ <img src="skills/slop-cop/assets/brand/slop-cop-social-card.png" alt="Slop Cop social card" width="600">
  </td>
  </tr>
  <tr>
@@ -134,7 +162,7 @@ MIT.
  </tr>
 </table>
 
-See [`assets/brand/README.md`](assets/brand/README.md) for intended uses and dimensions.
+See [`skills/slop-cop/assets/brand/README.md`](skills/slop-cop/assets/brand/README.md) for intended uses and dimensions.
 
 </details>
 <!-- slop-cop-brand:gallery:end -->
