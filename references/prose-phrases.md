@@ -17,6 +17,29 @@ Words and phrases that read as AI slop. This is a reference for the scan, not an
 
 ---
 
+## Vague-hyperbole and contrarian-authority hooks
+
+An unfalsifiable claim about a vague "most" or "everyone," used to manufacture a brave/insider stance before any evidence. One of the loudest slop tells, and it's slop even when the rest of the piece is specific. Name the specific who, or drop the frame and open on the concrete thing.
+
+- "most [X] are afraid to..." / "what most [X] won't do"
+- "most teams get this wrong" / "most people don't realize"
+- "here's what nobody tells you" / "what they don't teach you"
+- "here's the truth about..." / "the truth nobody wants to admit"
+- "everyone is doing [X] wrong"
+- "unpopular opinion:" / "hot take:"
+- sweeping industry verdicts: "the [industry] has been [hiding / lying / asleep]"
+
+Fix: replace the vague many with the specific one ("three of our four clients skipped this"), or cut the hook and start on the event.
+
+## Tic-words used for emphasis: real, the point, actually, fluff
+
+Words that add emphasis, not meaning. They're verbal tics that signal AI-essay cadence. Cut when they aren't earning their place.
+
+- **"real"** when nothing fake is being contrasted: "Real robotic arms," "a real step change," "the real work," "real talk." If it isn't separating the thing from a counterfeit, cut it.
+- **"X is the point" / "that's the point"** as a manufactured thesis ("the bad output is the point"). State the point; don't announce that you're about to.
+- **"actually"** as intensifier: "what it actually looks like," "would actually survive." Almost always cuttable.
+- **"fluff," "genuinely," "literally"** when used for emphasis rather than meaning.
+
 ## Throat-clearing openers
 
 Announcement phrases before the actual point. Cut them and state the point.
