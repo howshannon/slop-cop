@@ -10,9 +10,9 @@
 </p>
 
 <p align="center">
-  <img alt="license: MIT" src="https://img.shields.io/badge/license-MIT-141414">
-  <img alt="beats: prose · design · code" src="https://img.shields.io/badge/beats-prose%20%C2%B7%20design%20%C2%B7%20code-F2C230">
-  <img alt="works with: Claude, Codex, Cursor" src="https://img.shields.io/badge/agents-Claude%20%C2%B7%20Codex%20%C2%B7%20Cursor-141414">
+  <img alt="license: MIT" src="https://img.shields.io/badge/license-MIT-FF2E88">
+  <img alt="beats: prose · design · code" src="https://img.shields.io/badge/beats-prose%20%C2%B7%20design%20%C2%B7%20code-C8FF00">
+  <img alt="works with: Claude, Codex, Cursor" src="https://img.shields.io/badge/agents-Claude%20%C2%B7%20Codex%20%C2%B7%20Cursor-1A0B2E">
 </p>
 
 ---
