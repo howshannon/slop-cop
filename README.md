@@ -1,7 +1,8 @@
+<!-- slop-cop-brand:hero:start -->
 <p align="center">
-  <img src="assets/hero.png" alt="Slop Cop — catches AI slop in prose, design, and code before it reaches a human" width="100%">
+  <img src="assets/brand/slop-cop-hero.png" alt="Slop Cop: Book the clichés. Keep the voice." width="100%">
 </p>
-
+<!-- slop-cop-brand:hero:end -->
 <h1 align="center">Slop Cop 🚓</h1>
 
 <p align="center">
@@ -98,3 +99,42 @@ Slop Cop synthesizes and de-conflicts several open-source anti-slop projects, ha
 ## License
 
 MIT.
+
+
+## Review outcomes
+
+<!-- slop-cop-brand:outcomes:start -->
+<p align="center">
+  <img src="assets/brand/slop-cop-status-badges.png" alt="Slop Cop outcomes: Pass, Revise, and Booked" width="900">
+</p>
+<!-- slop-cop-brand:outcomes:end -->
+
+<!-- slop-cop-brand:gallery:start -->
+<details>
+<summary><strong>Brand assets</strong></summary>
+
+<br>
+
+<p align="center">
+  <img src="assets/brand/slop-cop-wordmark.png" alt="Slop Cop wordmark" width="850">
+</p>
+
+<table>
+  <tr>
+    <td width="34%" align="center">
+      <img src="assets/brand/slop-cop-emblem.png" alt="Slop Cop clipboard emblem" width="280">
+    </td>
+    <td width="66%" align="center">
+      <img src="assets/brand/slop-cop-social-card.png" alt="Slop Cop social card" width="600">
+    </td>
+  </tr>
+  <tr>
+    <td align="center"><strong>Emblem</strong></td>
+    <td align="center"><strong>Social card</strong></td>
+  </tr>
+</table>
+
+See [`assets/brand/README.md`](assets/brand/README.md) for intended uses and dimensions.
+
+</details>
+<!-- slop-cop-brand:gallery:end -->

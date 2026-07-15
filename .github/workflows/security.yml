@@ -1,17 +1,19 @@
-\
 name: Security and quality
 
 on:
   pull_request:
-    branches: [main]
+    branches:
+      - main
   push:
-    branches: [main]
+    branches:
+      - main
 
 permissions:
   contents: read
 
 jobs:
   security-and-quality:
+    name: security-and-quality
     runs-on: ubuntu-latest
     timeout-minutes: 10
 
@@ -22,41 +24,26 @@ jobs:
           fetch-depth: 0
           persist-credentials: false
 
-      - name: Static safety gate
+      - name: Install scanner prerequisite
         shell: bash
         run: |
-          set -euo pipefail
+          if ! command -v rg >/dev/null 2>&1; then
+            sudo apt-get update
+            sudo apt-get install -y ripgrep
+          fi
 
-          test -f SKILL.md
-          test -d references
-          test "$(find . -path ./.git -prune -o -type l -print | wc -l)" -eq 0
-
-          ! rg -n '^[[:space:]]*pull_request[_]target[[:space:]]*:' .github/workflows
-
-          while IFS= read -r line; do
-            ref=${line#*@}
-            ref=${ref%%[[:space:]#]*}
-            [[ "$ref" =~ ^[0-9a-f]{40}$ ]]
-          done < <(rg -o 'uses:[[:space:]]*[^[:space:]#]+@[^[:space:]#]+' .github/workflows)
-
-          ! rg -n -i --hidden \
-            --glob '!.git/**' \
-            --glob '!scripts/security_scan.sh' \
-            --glob '!.github/workflows/security.yml' \
-            '(curl|wget)[[:space:]].*\|[[:space:]]*(sh|bash)|base64[[:space:]]+(-d|--decode).*(sh|bash)|chmod[[:space:]]+\+s|/dev/tcp/|powershell.*(-enc|-encodedcommand)|Invoke-Expression' .
-
-          while IFS= read -r -d '' script; do
-            bash -n "$script"
-          done < <(find . -path ./.git -prune -o -type f \
-            \( -name '*.sh' -o -path './.githooks/*' \) -print0)
-
-      - name: Validate skill and benchmark fixtures
+      - name: Validate repository
         shell: bash
         run: |
           python3 scripts/validate_repo.py
           python3 scripts/validate_cases.py
 
-      - name: Verify package contents
+      - name: Run static security checks
+        shell: bash
+        run: |
+          bash scripts/security_scan.sh .
+
+      - name: Build and verify skill package
         shell: bash
         run: |
           bash scripts/build_skill.sh
@@ -64,9 +51,12 @@ jobs:
           from pathlib import Path
           import zipfile
 
-          path = Path("dist/slop-cop.skill")
-          with zipfile.ZipFile(path) as archive:
+          package = Path("dist/slop-cop.skill")
+          assert package.is_file()
+
+          with zipfile.ZipFile(package) as archive:
               assert "slop-cop/SKILL.md" in archive.namelist()
               assert archive.testzip() is None
-          print(f"Validated {path}")
+
+          print(f"Validated {package}")
           PY
