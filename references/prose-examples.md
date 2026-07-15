@@ -68,3 +68,18 @@ When you say A differs from B, name the part, version, date, or mechanism. If yo
 - After: "Senator Smith co-sponsored the Fair Repair Act in January 2024."
 
 State what they actually did, with the real source. Never infer a position into a named person's mouth.
+
+## 12. The whole-piece tell: register density (judge the aggregate)
+
+This is the miss that instance-by-instance review makes. Each line below is fine. The piece is slop because one move, the negation-reversal, structures the whole thing.
+
+- Before (a real event-recap post, condensed):
+  > "Risk didn't just get more complex. It got faster and less forgiving. [...] You don't leave knowing more about us. You leave seeing the world differently. [...] Not one of them said predict. Every one said adapt. [...] It wasn't unforeseeable. It just didn't look like a threat. [...] It was never about being right. It's about being ready. [...] The biggest risk isn't the disruption nobody saw. It's the one somebody saw and couldn't get heard. [...] The edge was never prediction."
+
+Count the negation-reversals and antitheses: seven-plus in one post, plus fragment stacks ("One room. Off the record. Two days.") and a punchline ending on nearly every paragraph. No single line is wrong. The *cadence* is the tell, one rhythm dressed as variety.
+
+- Diagnosis: Rhythm capped at 3, Voice capped at 4 (reads as generic thought-leader, not a specific person), Specificity genuinely high (real named speakers, a headcount, the oat/almond/coconut example) at 7. Total lands ~18/50. Slop, even though every fact is true.
+
+- Fix: keep the two strongest reversals (the predict-vs-adapt line and the closing thesis, they *are* the argument), rewrite the other five as plain statements, let three paragraphs end without a punch, and add one long breathing sentence. Protect the names and concrete examples; cut the reversal-cadence.
+
+**The lesson:** never clear a piece sentence by sentence. Count the recurring device first. Three or more of one move and the piece is templated no matter how good each line reads.
