@@ -5,6 +5,9 @@
 - Added offenders to `references/prose-phrases.md`: elevate, shift, land,
   evolve/evolving, actionable, curious, and quietly (false understatement).
 - Added a `prose-marketing-verbs` benchmark fixture covering the new entries.
+- Added more offenders: consequently, surgical ("surgical precision"),
+  embody/embodies, reverent/reverential, and the phrase "a delicate balance".
+- Added a `prose-false-gravitas` benchmark fixture covering these entries.
 
 ## 0.3.0
 

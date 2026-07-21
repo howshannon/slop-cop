@@ -67,6 +67,19 @@ cases:
       - empty tic words
       - no checkable specifics
 
+  - id: prose-false-gravitas
+    beat: prose
+    input: >-
+      The release embodies a reverent respect for the craft. Consequently, the
+      team struck a delicate balance, applying surgical precision to every
+      detail so the whole thing feels effortless.
+    expected_verdict: REVISE
+    expected_score_range: [12, 26]
+    must_find:
+      - inflated symbolism
+      - false-precision adjective
+      - no checkable specifics
+
   - id: design-fabricated-proof
     beat: design
     input: >-
