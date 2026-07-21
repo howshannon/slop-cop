@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased
+
+- Added offenders to `references/prose-phrases.md`: elevate, shift, land,
+  evolve/evolving, actionable, curious, and quietly (false understatement).
+- Added a `prose-marketing-verbs` benchmark fixture covering the new entries.
+
 ## 0.3.0
 
 - Published the skill through the standard `skills/slop-cop/` layout.

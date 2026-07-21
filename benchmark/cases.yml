@@ -54,6 +54,19 @@ cases:
     must_preserve:
       - quoted text
 
+  - id: prose-marketing-verbs
+    beat: prose
+    input: >-
+      The redesign quietly elevates the whole experience. It lands with users,
+      streamlines the busywork, and turns evolving priorities into actionable
+      next steps. I'm curious how far this pivotal shift can go.
+    expected_verdict: REVISE
+    expected_score_range: [12, 26]
+    must_find:
+      - marketing verbs
+      - empty tic words
+      - no checkable specifics
+
   - id: design-fabricated-proof
     beat: design
     input: >-
