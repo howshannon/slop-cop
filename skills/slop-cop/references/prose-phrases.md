@@ -62,6 +62,10 @@ Rule of thumb: any "here's what/this/that" construction is throat-clearing. Dele
 | unveil | reveal, show, introduce |
 | navigate (abstract) | manage, handle, work through |
 | streamline | simplify |
+| elevate | raise, lift, improve |
+| shift (abstract) | move, change, turn |
+| land (as in "the point lands") | work, connect, resonate |
+| evolve / evolving | change, grow, develop |
 | enhance | improve, strengthen |
 | optimize / optimise | improve, refine |
 | endeavour | try, attempt |
@@ -83,6 +87,8 @@ Rule of thumb: any "here's what/this/that" construction is throat-clearing. Dele
 | intricate / nuanced / multifaceted | complex, detailed, subtle |
 | holistic | complete, whole |
 | paramount | very important, essential |
+| actionable | specific, usable, concrete |
+| curious ("I'm curious" / "a curious thing") | interesting, odd, or cut |
 
 ## Overused metaphorical nouns
 
@@ -94,7 +100,7 @@ tapestry ("a tapestry of regulations"), symphony ("a symphony of features"), bea
 
 Kill adverbs doing vague work. Cut or replace with the specific thing.
 
-absolutely, actually, basically, certainly, clearly, definitely, essentially, extremely, fundamentally, incredibly, interestingly, importantly, crucially, literally, naturally, obviously, quite, really, significantly, simply, surely, truly, ultimately, undoubtedly, very, just, genuinely, honestly, deeply, inherently, inevitably.
+absolutely, actually, basically, certainly, clearly, definitely, essentially, extremely, fundamentally, incredibly, interestingly, importantly, crucially, literally, naturally, obviously, quietly (false understatement: "quietly transforming"), quite, really, significantly, simply, surely, truly, ultimately, undoubtedly, very, just, genuinely, honestly, deeply, inherently, inevitably.
 
 Filler phrases: "At its core", "In today's [X]", "It's worth noting", "At the end of the day", "When it comes to", "In a world where", "The reality is", "a myriad of", "a plethora of", "the fact that", "prior to" (→ before), "subsequent to" (→ after), "in light of", "with respect to", "in terms of", "pertaining to".
 
