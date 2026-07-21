@@ -73,6 +73,7 @@ Rule of thumb: any "here's what/this/that" construction is throat-clearing. Dele
 | elucidate | explain, clarify |
 | shed light on | clarify, explain, reveal |
 | pave the way for | enable, allow |
+| embody / embodies / embodied | show, represent, reflect |
 
 ## Overused adjectives
 
@@ -89,6 +90,8 @@ Rule of thumb: any "here's what/this/that" construction is throat-clearing. Dele
 | paramount | very important, essential |
 | actionable | specific, usable, concrete |
 | curious ("I'm curious" / "a curious thing") | interesting, odd, or cut |
+| surgical ("surgical precision") | precise, exact, targeted |
+| reverent / reverential | respectful, admiring |
 
 ## Overused metaphorical nouns
 
@@ -138,6 +141,7 @@ Long words are not banned. Prefer the shorter word when it is more natural for t
 | furthermore / moreover | also, and, besides |
 | notwithstanding | despite, still |
 | that being said | however, still |
+| consequently | so, as a result |
 | to put it simply | in short |
 | it is worth noting that | note that |
 | in the realm/landscape of | in, within |
@@ -154,7 +158,7 @@ Long words are not banned. Prefer the shorter word when it is more natural for t
 
 These phrases often inflate importance without adding evidence. Review them in context:
 
-"provide a valuable insight", "left an indelible mark", "play a significant role in shaping", "an unwavering commitment", "open a new avenue", "a stark reminder", "gain a comprehensive understanding", "serves as a testament", "watershed moment", "deeply rooted".
+"provide a valuable insight", "left an indelible mark", "play a significant role in shaping", "an unwavering commitment", "open a new avenue", "a stark reminder", "gain a comprehensive understanding", "serves as a testament", "watershed moment", "deeply rooted", "a delicate balance", "strike a delicate balance".
 
 ## Hedging markers
 
