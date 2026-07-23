@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>Drink Drop — Suika-Style Merge Game</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: #1a1033;
+    touch-action: none;
+    -webkit-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  #game-wrap {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  canvas {
+    display: block;
+    background: linear-gradient(#2b1b4d 0%, #1a1033 60%, #140b28 100%);
+    border-radius: 8px;
+  }
+  #overlay {
+    position: fixed;
+    inset: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background: rgba(10, 5, 25, 0.82);
+    z-index: 10;
+  }
+  #overlay.show { display: flex; }
+  .panel {
+    text-align: center;
+    color: #fff;
+    padding: 32px 40px;
+    background: #2b1b4d;
+    border: 2px solid #6f4fc9;
+    border-radius: 16px;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.5);
+  }
+  .panel h1 { font-size: 28px; margin-bottom: 8px; }
+  .panel p  { font-size: 18px; margin-bottom: 20px; color: #cbb8ff; }
+  .panel button {
+    font-size: 18px;
+    font-weight: 700;
+    padding: 12px 36px;
+    border: none;
+    border-radius: 999px;
+    background: #ffb703;
+    color: #3a2a00;
+    cursor: pointer;
+  }
+  .panel button:active { transform: scale(0.96); }
+</style>
+</head>
+<body>
+<div id="game-wrap"><canvas id="game"></canvas></div>
+<div id="overlay">
+  <div class="panel">
+    <h1>Game Over</h1>
+    <p>Score: <span id="final-score">0</span><br>Best: <span id="best-score">0</span></p>
+    <button id="restart-btn">Play Again</button>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/matter-js@0.19.0/build/matter.min.js"></script>
+<script>
+(() => {
+  "use strict";
+  const { Engine, World, Bodies, Body, Events, Composite } = Matter;
+
+  if (!CanvasRenderingContext2D.prototype.roundRect) {
+    CanvasRenderingContext2D.prototype.roundRect = function (x, y, w, h, r) {
+      this.moveTo(x + r, y);
+      this.arcTo(x + w, y, x + w, y + h, r);
+      this.arcTo(x + w, y + h, x, y + h, r);
+      this.arcTo(x, y + h, x, y, r);
+      this.arcTo(x, y, x + w, y, r);
+      this.closePath();
+    };
+  }
+
+  // ---------- Logical playfield (portrait). Scaled to fit any screen. ----------
+  const W = 480;
+  const H = 780;
+  const WALL = 16;              // wall thickness
+  const FLOOR_Y = H - WALL / 2; // bottom wall centre
+  const DROP_Y = 110;           // y where the held drink hovers
+  const LINE_Y = 165;           // game-over line
+  const OVER_MS = 2000;         // time a drink may sit above the line
+
+  // ---------- Drink tiers (smallest → largest) ----------
+  const TIERS = [
+    { name: "Shot",       label: "Shot",      color: "#e63946", radius: 18,  points: 1 },
+    { name: "Juice",      label: "Juice",     color: "#f77f00", radius: 25,  points: 3 },
+    { name: "Lemonade",   label: "Lemon",     color: "#ffd60a", radius: 33,  points: 6 },
+    { name: "Margarita",  label: "Marg",      color: "#b5e48c", radius: 42,  points: 12 },
+    { name: "Coconut",    label: "Coco",      color: "#2d9d78", radius: 52,  points: 24 },
+    { name: "Blue Lagoon", label: "Lagoon",   color: "#4cc9f0", radius: 63,  points: 48 },
+    { name: "Slush",      label: "Slush",     color: "#3a5dd9", radius: 76,  points: 96 },
+    { name: "Pitcher",    label: "Pitcher",   color: "#8338ec", radius: 90,  points: 192 },
+    { name: "Punch Bowl", label: "Punch",     color: "#ff5d8f", radius: 106, points: 384 },
+    { name: "Trophy",     label: "Trophy",    color: "#ffb703", radius: 124, points: 768 },
+  ];
+  const TROPHY_MERGE_BONUS = 5000; // two trophies vanish for this
+  const SPAWNABLE = 5;             // random drops come from the first 5 tiers
+
+  // ---------- Canvas / scaling ----------
+  const canvas = document.getElementById("game");
+  const ctx = canvas.getContext("2d");
+  let viewScale = 1;
+
+  function fitCanvas() {
+    const dpr = Math.min(window.devicePixelRatio || 1, 2);
+    const availW = window.innerWidth;
+    const availH = window.innerHeight;
+    viewScale = Math.min(availW / W, availH / H);
+    canvas.style.width = W * viewScale + "px";
+    canvas.style.height = H * viewScale + "px";
+    canvas.width = Math.round(W * viewScale * dpr);
+    canvas.height = Math.round(H * viewScale * dpr);
+    ctx.setTransform(viewScale * dpr, 0, 0, viewScale * dpr, 0, 0);
+  }
+  window.addEventListener("resize", fitCanvas);
+  fitCanvas();
+
+  // ---------- Physics ----------
+  const engine = Engine.create();
+  engine.gravity.y = 1.15;
+  engine.positionIterations = 8;
+  engine.velocityIterations = 6;
+
+  const wallOpts = { isStatic: true, friction: 0.4, restitution: 0.1, label: "wall" };
+  World.add(engine.world, [
+    Bodies.rectangle(WALL / 2, H / 2, WALL, H, wallOpts),          // left
+    Bodies.rectangle(W - WALL / 2, H / 2, WALL, H, wallOpts),      // right
+    Bodies.rectangle(W / 2, FLOOR_Y, W, WALL, wallOpts),           // bottom
+  ]);
+
+  // ---------- Game state ----------
+  let score = 0;
+  let best = Number(localStorage.getItem("drinkDropBest") || 0);
+  let heldTier = 0;      // tier of the drink under the player's finger
+  let nextTier = 0;      // tier shown in the Next box
+  let aimX = W / 2;
+  let canDrop = true;
+  let gameOver = false;
+  let popups = [];       // floating "+N" score texts
+  const overTimers = new Map(); // body.id -> ms spent above the line
+
+  function randTier() { return Math.floor(Math.random() * SPAWNABLE); }
+
+  function makeDrink(tier, x, y) {
+    const t = TIERS[tier];
+    const body = Bodies.circle(x, y, t.radius, {
+      restitution: 0.25,
+      friction: 0.35,
+      frictionAir: 0.008,
+      density: 0.0012,
+      label: "drink",
+    });
+    body.tier = tier;
+    return body;
+  }
+
+  function resetGame() {
+    Composite.allBodies(engine.world)
+      .filter(b => b.label === "drink")
+      .forEach(b => World.remove(engine.world, b));
+    overTimers.clear();
+    popups = [];
+    score = 0;
+    heldTier = randTier();
+    nextTier = randTier();
+    aimX = W / 2;
+    canDrop = true;
+    gameOver = false;
+    document.getElementById("overlay").classList.remove("show");
+  }
+
+  function clampAim(x, tier) {
+    const r = TIERS[tier].radius;
+    return Math.min(Math.max(x, WALL + r + 2), W - WALL - r - 2);
+  }
+
+  function drop() {
+    if (!canDrop || gameOver) return;
+    canDrop = false;
+    World.add(engine.world, makeDrink(heldTier, clampAim(aimX, heldTier), DROP_Y));
+    heldTier = nextTier;
+    nextTier = randTier();
+    aimX = clampAim(aimX, heldTier);
+    setTimeout(() => { canDrop = true; }, 450);
+  }
+
+  // ---------- Merging ----------
+  Events.on(engine, "collisionStart", (event) => {
+    if (gameOver) return;
+    const consumed = new Set();
+    for (const pair of event.pairs) {
+      const a = pair.bodyA, b = pair.bodyB;
+      if (a.label !== "drink" || b.label !== "drink") continue;
+      if (a.tier !== b.tier) continue;
+      if (consumed.has(a.id) || consumed.has(b.id)) continue;
+      consumed.add(a.id);
+      consumed.add(b.id);
+
+      const mx = (a.position.x + b.position.x) / 2;
+      const my = (a.position.y + b.position.y) / 2;
+      const tier = a.tier;
+
+      World.remove(engine.world, a);
+      World.remove(engine.world, b);
+      overTimers.delete(a.id);
+      overTimers.delete(b.id);
+
+      if (tier === TIERS.length - 1) {
+        // Two golden trophies: massive payout, both vanish.
+        addScore(TROPHY_MERGE_BONUS, mx, my, true);
+      } else {
+        const merged = makeDrink(tier + 1, mx, my);
+        // Preserve a little of the pair's momentum so stacks keep feeling live.
+        Body.setVelocity(merged, {
+          x: (a.velocity.x + b.velocity.x) / 2,
+          y: (a.velocity.y + b.velocity.y) / 2,
+        });
+        World.add(engine.world, merged);
+        addScore(TIERS[tier + 1].points, mx, my, false);
+      }
+    }
+  });
+
+  function addScore(points, x, y, big) {
+    score += points;
+    popups.push({ text: "+" + points, x, y, age: 0, big });
+  }
+
+  // ---------- Game over ----------
+  function checkGameOver(deltaMs) {
+    for (const body of Composite.allBodies(engine.world)) {
+      if (body.label !== "drink") continue;
+      const top = body.position.y - TIERS[body.tier].radius;
+      if (top < LINE_Y) {
+        const t = (overTimers.get(body.id) || 0) + deltaMs;
+        overTimers.set(body.id, t);
+        if (t >= OVER_MS) { endGame(); return; }
+      } else {
+        overTimers.delete(body.id);
+      }
+    }
+  }
+
+  function endGame() {
+    gameOver = true;
+    best = Math.max(best, score);
+    localStorage.setItem("drinkDropBest", String(best));
+    document.getElementById("final-score").textContent = score;
+    document.getElementById("best-score").textContent = best;
+    document.getElementById("overlay").classList.add("show");
+  }
+
+  document.getElementById("restart-btn").addEventListener("click", resetGame);
+
+  // ---------- Input (touch + mouse) ----------
+  function eventX(e) {
+    const rect = canvas.getBoundingClientRect();
+    const clientX = (e.touches && e.touches.length ? e.touches[0].clientX : e.clientX);
+    return (clientX - rect.left) / viewScale;
+  }
+  function onMove(e) {
+    if (gameOver) return;
+    aimX = clampAim(eventX(e), heldTier);
+    e.preventDefault();
+  }
+  function onEnd(e) {
+    if (gameOver) return;
+    drop();
+    e.preventDefault();
+  }
+  canvas.addEventListener("touchstart", onMove, { passive: false });
+  canvas.addEventListener("touchmove", onMove, { passive: false });
+  canvas.addEventListener("touchend", onEnd, { passive: false });
+  canvas.addEventListener("mousedown", onMove);
+  canvas.addEventListener("mousemove", (e) => { if (e.buttons) onMove(e); });
+  canvas.addEventListener("mouseup", onEnd);
+
+  // ---------- Rendering ----------
+  function drawDrink(x, y, angle, tier, ghost) {
+    const t = TIERS[tier];
+    ctx.save();
+    ctx.translate(x, y);
+    ctx.globalAlpha = ghost ? 0.9 : 1;
+
+    // body
+    ctx.beginPath();
+    ctx.arc(0, 0, t.radius, 0, Math.PI * 2);
+    ctx.fillStyle = t.color;
+    ctx.fill();
+    ctx.lineWidth = Math.max(2, t.radius * 0.07);
+    ctx.strokeStyle = "rgba(0,0,0,0.28)";
+    ctx.stroke();
+
+    // rotating highlight dot so rolling is visible
+    ctx.save();
+    ctx.rotate(angle);
+    ctx.beginPath();
+    ctx.arc(-t.radius * 0.38, -t.radius * 0.38, Math.max(3, t.radius * 0.16), 0, Math.PI * 2);
+    ctx.fillStyle = "rgba(255,255,255,0.45)";
+    ctx.fill();
+    ctx.restore();
+
+    // label (kept upright)
+    ctx.fillStyle = tier === 2 ? "rgba(60,45,0,0.85)" : "rgba(255,255,255,0.92)";
+    ctx.font = `700 ${Math.max(10, Math.round(t.radius * 0.42))}px sans-serif`;
+    ctx.textAlign = "center";
+    ctx.textBaseline = "middle";
+    ctx.fillText(t.label, 0, 0);
+    ctx.restore();
+  }
+
+  function draw(deltaMs) {
+    ctx.clearRect(0, 0, W, H);
+
+    // walls
+    ctx.fillStyle = "#3d2a6b";
+    ctx.fillRect(0, 0, WALL, H);
+    ctx.fillRect(W - WALL, 0, WALL, H);
+    ctx.fillRect(0, H - WALL, W, WALL);
+
+    // game-over line
+    ctx.save();
+    ctx.strokeStyle = "rgba(255, 90, 90, 0.55)";
+    ctx.lineWidth = 2;
+    ctx.setLineDash([10, 8]);
+    ctx.beginPath();
+    ctx.moveTo(WALL, LINE_Y);
+    ctx.lineTo(W - WALL, LINE_Y);
+    ctx.stroke();
+    ctx.restore();
+
+    // drop guide line under the held drink
+    if (!gameOver && canDrop) {
+      ctx.save();
+      ctx.strokeStyle = "rgba(255,255,255,0.22)";
+      ctx.lineWidth = 2;
+      ctx.setLineDash([4, 8]);
+      ctx.beginPath();
+      ctx.moveTo(aimX, DROP_Y + TIERS[heldTier].radius);
+      ctx.lineTo(aimX, H - WALL);
+      ctx.stroke();
+      ctx.restore();
+    }
+
+    // settled drinks
+    for (const body of Composite.allBodies(engine.world)) {
+      if (body.label !== "drink") continue;
+      drawDrink(body.position.x, body.position.y, body.angle, body.tier, false);
+    }
+
+    // held drink
+    if (!gameOver && canDrop) {
+      drawDrink(clampAim(aimX, heldTier), DROP_Y, 0, heldTier, true);
+    }
+
+    // score
+    ctx.fillStyle = "#ffffff";
+    ctx.font = "800 40px sans-serif";
+    ctx.textAlign = "center";
+    ctx.textBaseline = "top";
+    ctx.fillText(String(score), W / 2, 18);
+    ctx.font = "600 13px sans-serif";
+    ctx.fillStyle = "rgba(255,255,255,0.5)";
+    ctx.fillText("BEST " + Math.max(best, score), W / 2, 62);
+
+    // next preview (bottom left)
+    const boxSize = 76;
+    const bx = WALL + 10, by = H - WALL - boxSize - 10;
+    ctx.fillStyle = "rgba(0,0,0,0.35)";
+    ctx.strokeStyle = "rgba(255,255,255,0.25)";
+    ctx.lineWidth = 2;
+    ctx.beginPath();
+    ctx.roundRect(bx, by, boxSize, boxSize, 10);
+    ctx.fill();
+    ctx.stroke();
+    ctx.fillStyle = "rgba(255,255,255,0.6)";
+    ctx.font = "700 12px sans-serif";
+    ctx.textAlign = "center";
+    ctx.fillText("NEXT", bx + boxSize / 2, by + 6);
+    const nt = TIERS[nextTier];
+    const pr = Math.min(nt.radius, boxSize * 0.28);
+    ctx.save();
+    ctx.translate(bx + boxSize / 2, by + boxSize / 2 + 8);
+    ctx.beginPath();
+    ctx.arc(0, 0, pr, 0, Math.PI * 2);
+    ctx.fillStyle = nt.color;
+    ctx.fill();
+    ctx.strokeStyle = "rgba(0,0,0,0.3)";
+    ctx.stroke();
+    ctx.restore();
+
+    // score popups
+    for (const p of popups) {
+      p.age += deltaMs;
+      const life = p.big ? 1400 : 800;
+      const alpha = 1 - p.age / life;
+      if (alpha <= 0) continue;
+      ctx.fillStyle = p.big ? `rgba(255,215,60,${alpha})` : `rgba(255,255,255,${alpha})`;
+      ctx.font = `800 ${p.big ? 34 : 20}px sans-serif`;
+      ctx.textAlign = "center";
+      ctx.fillText(p.text, p.x, p.y - p.age * 0.04);
+    }
+    popups = popups.filter(p => p.age < 1400);
+  }
+
+  // ---------- Main loop ----------
+  let lastTime = performance.now();
+  function tick(now) {
+    const deltaMs = Math.min(now - lastTime, 50); // clamp huge tab-switch deltas
+    lastTime = now;
+    if (!gameOver) {
+      Engine.update(engine, deltaMs);
+      checkGameOver(deltaMs);
+    }
+    draw(deltaMs);
+    requestAnimationFrame(tick);
+  }
+
+  resetGame();
+  requestAnimationFrame(tick);
+})();
+</script>
+</body>
+</html>
