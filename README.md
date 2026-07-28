@@ -1,6 +1,6 @@
 <!-- slop-cop-brand:hero:start -->
 <p align="center">
-  <img src="skills/slop-cop/assets/brand/slop-cop-hero.png?v=4" alt="Slop Cop: Book the clichés. Keep the voice." width="100%">
+  <img src="skills/slop-cop/assets/brand/slop-cop-hero.png?v=5" alt="Slop Cop cat officer booking clichés with handcuffs" width="100%">
 </p>
 <!-- slop-cop-brand:hero:end -->
 
@@ -237,7 +237,7 @@ MIT.
       <img src="skills/slop-cop/assets/brand/slop-cop-emblem.png?v=4" alt="Slop Cop cat clipboard emblem" width="280">
     </td>
     <td width="66%" align="center">
-      <img src="skills/slop-cop/assets/brand/slop-cop-social-card.png?v=4" alt="Slop Cop social card with cat mascot" width="600">
+      <img src="skills/slop-cop/assets/brand/slop-cop-social-card.png?v=5" alt="Slop Cop social card with handcuffs and Script Kitty Police cat mascot" width="600">
     </td>
   </tr>
   <tr>
