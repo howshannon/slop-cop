@@ -78,7 +78,7 @@ This is the miss that instance-by-instance review makes. Each line below is fine
 
 Count the negation-reversals and antitheses: seven-plus in one post, plus fragment stacks ("One room. Off the record. Two days.") and a punchline ending on nearly every paragraph. No single line is wrong. The *cadence* is the tell, one rhythm dressed as variety.
 
-- Diagnosis: Rhythm capped at 3, Voice capped at 4 (reads as generic thought-leader, not a specific person), Specificity genuinely high (real named speakers, a headcount, the oat/almond/coconut example) at 7. Total lands ~18/50. Slop, even though every fact is true.
+- Diagnosis: Specific details are worth preserving, but the repeated reversal cadence is one major violation and the local fragment/tic-word problems are minors. Apply the fixed deductions and show the arithmetic; true facts do not cancel separate violations.
 
 - Fix: keep the two strongest reversals (the predict-vs-adapt line and the closing thesis, they *are* the argument), rewrite the other five as plain statements, let three paragraphs end without a punch, and add one long breathing sentence. Protect the names and concrete examples; cut the reversal-cadence.
 
@@ -101,7 +101,7 @@ What's slop, regardless of that specificity:
 - **All-negation paragraph:** the entire "Robots embarrass that whole posture…" block.
 - **Recurring personal tic:** "I left with more questions than I had going in" (reused from an earlier post).
 
-Diagnosis: Specificity is genuinely high (7), but Directness (5), Rhythm (3), Voice (4), and Density (4) all suffer because the frame is machine-made. Total ~23/50. Slop.
+Diagnosis: Specificity is strong, but the repeated frame is a major violation and the local density problems are minors. Apply the fixed deductions and show the arithmetic; specificity prevents an unsupported-claim violation but does not award bonus points.
 
 The fix keeps the wiring-diagram city, the depressed Wednesday portrait, and the screensaver line, and rewrites the scaffolding: drop the hook and open on the robots, rejoin the fragments, cut "real" and "is the point," and turn the all-negation paragraph into a plain statement of what the physical test exposed.
 

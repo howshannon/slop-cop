@@ -1,12 +1,12 @@
 interface:
   display_name: "Slop Cop"
-  short_description: "Audit and fix generic AI-slop patterns."
+  short_description: "Score, fix, and ticket generic slop."
   icon_small: "./assets/brand/slop-cop-emblem.png"
   icon_large: "./assets/brand/slop-cop-emblem.png"
-  brand_color: "#FF2E88"
+  brand_color: "#FFAE4D"
   default_prompt: >-
-    Run Slop Cop on this material. Return the verdict, score or severity,
-    evidence tally, biggest offense, highest-impact fix, and revised version.
+    Use $slop-cop to return a deterministic 0–100 report-card ticket, evidence,
+    and the recommended next step for this material.
 
 policy:
   allow_implicit_invocation: true

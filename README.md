@@ -88,7 +88,7 @@ The skill loads only the references needed for the material under review.
 ### Audit without rewriting
 
 ```text
-$slop-cop Audit this draft. List the evidence, severity, and recommended fixes without rewriting it.
+$slop-cop Audit this draft without rewriting it.
 ```
 
 ### Grade a post
@@ -115,27 +115,65 @@ $slop-cop Review this landing page for generic generated-UI defaults, unsupporte
 $slop-cop Review this diff for happy-path-only logic, swallowed failures, unsafe boundaries, unnecessary abstractions, and missing tests.
 ```
 
+### Slop Cop this
+
+```text
+$slop-cop This.
+```
+
+Every request returns a Slop Cop report-card ticket: a deterministic 0–100
+score, letter grade, evidence-backed charge, fixed slogan, and recommended next
+step. It targets the work, not the person. It does not message anyone unless
+you explicitly ask it to send the ticket through a connected service.
+
 Compatible agents may select Slop Cop when a request matches its description. Explicit invocation is the most reliable way to request a particular review.
 
 ## Output
 
-Slop Cop supports three modes:
+Slop Cop supports four modes, but the report-card ticket is always included:
 
-- **Audit:** findings, quoted evidence, severity, and fixes
-- **Grade:** a scored review using calibration anchors
+- **Audit:** emphasize findings, quoted evidence, severity, and fixes
+- **Grade:** emphasize the score and penalty arithmetic
 - **Rewrite:** the smallest useful revision, followed by a self-audit
+- **Ticket:** emphasize the funny, evidence-backed citation
 
-For prose, it scores five dimensions from 1–10:
+Scoring starts at 100 and uses fixed deductions:
 
-| Dimension | Review question |
-|---|---|
-| Directness | Does it state the point without empty setup or stacked hedging? |
-| Specificity | Are material claims concrete and supportable? |
-| Rhythm | Are sentence and paragraph shapes varied for a reason? |
-| Voice | Does it preserve a consistent, identifiable voice? |
-| Density | Is every remaining sentence doing useful work? |
+| Violation | Deduction |
+|---|---:|
+| Blocker | −30 |
+| Major | −15 |
+| Minor | −5 |
+| Note | −1 |
 
-A score below 35 normally needs revision. The score is an editorial aid, not an authorship detector or a substitute for judgment.
+Each violation is counted once at its highest severity. The report always shows
+the arithmetic, so identical findings produce the same score.
+
+| Grade | Score | Grade | Score |
+|---|---:|---|---:|
+| A+ | 97–100 | C | 73–76 |
+| A | 93–96 | C- | 70–72 |
+| A- | 90–92 | D+ | 67–69 |
+| B+ | 87–89 | D | 63–66 |
+| B | 83–86 | D- | 60–62 |
+| B- | 80–82 | F | 0–59 |
+| C+ | 77–79 |  |  |
+
+The scale runs from **0 = total slop** to **100 = damn, you're not a
+robot?** Scores below C+ draw from 30 fixed bad-grade slogans; C+ and above
+draw from 30 fixed good-grade slogans. Selection is rules-based, not random,
+and Slop Cop never invents a new slogan. The joke is not an authorship claim:
+the score measures observable quality problems only.
+
+Recommended next steps are fixed by score band:
+
+- 97–100: ship
+- 90–96: tweak optional notes
+- 80–89: tweak minor violations
+- 77–79: revise the highest-impact violation
+- 70–76: revise material violations
+- 60–69: rewrite affected sections
+- 0–59: start over from the strongest factual core
 
 <!-- slop-cop-brand:outcomes:start -->
 <p align="center">
@@ -176,7 +214,7 @@ slop-cop/
         │   └── openai.yaml
         ├── assets/
         │   └── brand/
-        └── references/
+        ├── references/
             ├── calibration-anchors.md
             ├── code.md
             ├── design.md
@@ -184,7 +222,11 @@ slop-cop/
             ├── prose-phrases.md
             ├── prose-structures.md
             ├── report-template.md
-            └── research-sources.md
+            ├── research-sources.md
+            ├── ticket-slogans.json
+            └── tickets.md
+        └── scripts/
+            └── score_ticket.py
 ```
 
 ## Development
