@@ -1,17 +1,17 @@
 ---
 name: slop-cop
 description: >-
-  Audit, grade, and rewrite generic AI-slop patterns in prose, social posts,
-  UI/design, and code. Use when asked to de-slop writing, humanize AI copy,
-  grade a draft, review a landing page or generated interface, remove vague
-  claims and repetitive rhetoric, or inspect AI-written code for generic
-  abstractions and happy-path-only logic. Do not use to determine whether AI
+  Audit, grade, rewrite, and issue funny evidence-backed tickets for generic
+  AI-slop patterns in prose, social posts, UI/design, and code. Use when asked
+  to de-slop writing, humanize AI copy, grade a draft, review a landing page or
+  generated interface, remove vague claims and repetitive rhetoric, inspect
+  AI-written code for generic abstractions and happy-path-only logic, or ticket
+  someone for a specific quality offense. Do not use to determine whether AI
   authored something.
 license: MIT
-compatibility: Works in Agent Skills-compatible environments that support Markdown references.
 metadata:
   author: howshannon
-  version: "0.3.0"
+  version: "0.4.0"
 ---
 
 # Slop Cop
@@ -41,9 +41,15 @@ proof of AI authorship.
 ## Choose a mode
 
 - **Audit:** list findings, evidence, severity, and fixes without rewriting.
-- **Grade:** score the requested beat and explain the score.
+- **Grade:** emphasize the score and its arithmetic.
 - **Rewrite:** make the smallest changes that remove the problems; then audit
   the rewrite before returning it.
+- **Ticket:** emphasize one funny, shareable citation.
+
+Every mode, including a bare “slop cop this,” ends with the same scored
+report-card ticket. Read [report-card tickets](references/tickets.md) and use
+`scripts/score_ticket.py`; never improvise the score, grade, slogan, or next
+step.
 
 Route only to the references needed:
 
@@ -55,6 +61,7 @@ Route only to the references needed:
 - Scoring → [calibration anchors](references/calibration-anchors.md) and
   [report template](references/report-template.md).
 - Evidence claims → [research sources](references/research-sources.md).
+- Funny citations → [ticket mode](references/tickets.md).
 
 ## The two laws
 
@@ -136,29 +143,26 @@ before deciding severity.
    facts rather than inventing them.
 6. Re-run the tally and verify facts, quotations, links, numbers, and tone.
 
-## Grading prose
+## Scoring every review
 
-Score five dimensions from 1–10, total 50. A score below 35 normally needs
-revision.
+Start at 100. Deduct 30 per blocker, 15 per major, 5 per minor, and 1 per note,
+then clamp at zero. Count each observable violation once at its highest
+applicable severity. Show the violation counts and full arithmetic so the same
+findings always produce the same score.
 
-| Dimension | Question |
-|---|---|
-| Directness | Does it state the point without empty setup or stacked hedging? |
-| Specificity | Are material claims concrete and supportable? |
-| Rhythm | Are sentence and paragraph shapes varied for a reason? |
-| Voice | Does it preserve a consistent, identifiable human voice? |
-| Density | Is every remaining sentence doing useful work? |
+Map the result to the fixed A+ through F bands in
+[report-card tickets](references/tickets.md). Scores under C+ use one of the 30
+fixed bad-grade slogans; C+ and above use one of the 30 fixed good-grade
+slogans. Select it with the documented formula—never generate a new one.
 
-Apply caps only when the tally supports them:
+The displayed scale is `0 = total slop · 100 = damn, you're not a robot?`.
+This is humorous editorial shorthand only. The result measures observable
+quality problems and must never be presented as authorship detection.
 
-- One device used 3+ times: Rhythm may not exceed 5.
-- One device used 5+ times, or two device classes used 3+ times: Rhythm and
-  Voice may not exceed 4.
-- Fabricated attribution, quote, statistic, or experience: overall result is a
-  blocker regardless of total.
-
-Report the tally, quoted evidence, biggest issue, confidence, score, and the
-single highest-leverage change. Use the report template.
+Always report the score, letter grade, charge, evidence, penalty arithmetic,
+fixed citation, recommended next step, and smallest useful fix. Use the
+[report template](references/report-template.md). A clean review still gets a
+100/A+ report card with “No citation-worthy violations found.”
 
 ## Design and code
 

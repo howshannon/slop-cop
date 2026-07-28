@@ -8,7 +8,7 @@ cases:
       opportunity is not to move faster. It is to build a robust foundation
       that actually scales. That is the point.
     expected_verdict: REVISE
-    expected_score_range: [10, 24]
+    expected_score_range: [40, 76]
     must_find:
       - vague quantifier
       - repeated antithesis
@@ -24,7 +24,7 @@ cases:
       plain English instead of suspicious shell commands, which is why I kept
       the manual review step.
     expected_verdict: PASS
-    expected_score_range: [40, 49]
+    expected_score_range: [90, 100]
     must_preserve:
       - all numbers
       - Sunday
@@ -37,7 +37,7 @@ cases:
       to private enterprise code. A larger replication would narrow that
       uncertainty.
     expected_verdict: PASS
-    expected_score_range: [38, 48]
+    expected_score_range: [90, 100]
     must_not_find:
       - empty hedging
     must_preserve:
@@ -50,7 +50,7 @@ cases:
       are doing security wrong.” I removed it because it made an unsupported
       claim before presenting the scan results.
     expected_verdict: PASS
-    expected_score_range: [38, 48]
+    expected_score_range: [90, 100]
     must_preserve:
       - quoted text
 
@@ -61,7 +61,7 @@ cases:
       streamlines the busywork, and turns evolving priorities into actionable
       next steps. I'm curious how far this pivotal shift can go.
     expected_verdict: REVISE
-    expected_score_range: [12, 26]
+    expected_score_range: [40, 76]
     must_find:
       - marketing verbs
       - empty tic words
@@ -74,7 +74,7 @@ cases:
       team struck a delicate balance, applying surgical precision to every
       detail so the whole thing feels effortless.
     expected_verdict: REVISE
-    expected_score_range: [12, 26]
+    expected_score_range: [40, 76]
     must_find:
       - inflated symbolism
       - false-precision adjective

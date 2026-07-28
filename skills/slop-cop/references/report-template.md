@@ -1,42 +1,30 @@
 # Report template
 
-## Verdict
-
-PASS | PASS WITH EDITS | REVISE | BLOCKER
-
-## Scope and confidence
-
-- Beat:
-- Mode:
-- Confidence:
-- Exclusion zones:
-- Limits:
-
 ## Findings
 
 | Severity | Evidence/location | Observable pattern | Why it matters | Recommended change |
 |---|---|---|---|---|
 
-## Device tally (prose only)
+For prose, also tally repeated devices. For design and code, tally the
+corresponding observable failures. Count each violation once at its highest
+severity.
 
-- Antithesis / negation reversal:
-- Tricolon:
-- Fragment or punchline stack:
-- Vague authority/hyperbole hook:
-- Label-colon construction:
-- Empty tic word:
-- Repeated paragraph shape:
-- Formatting/punctuation density:
+## Required report-card ticket
 
-## Score (grade mode)
+```text
+🚨 SLOP COP REPORT CARD
+To: <recipient or artifact>
+Score: <0–100>/100 (<A+ through F>)
+Scale: 0 = total slop · 100 = damn, you're not a robot?
+Charge: <biggest offense or no citation-worthy violations found>
+Evidence: <quoted or observable evidence>
+Violations: <n> blocker · <n> major · <n> minor · <n> note
+Score math: 100 - (<n>×30 blocker) - (<n>×15 major) - (<n>×5 minor) - (<n>×1 note) = <score>
+Citation: <deterministically selected fixed slogan>
+Recommended next step: <fixed score-band action>
+Fix: <single highest-leverage change>
+```
 
-- Directness: /10
-- Specificity: /10
-- Rhythm: /10
-- Voice: /10
-- Density: /10
-- **Total: /50**
-
-## Highest-leverage change
-
-One concrete change, not a general aspiration.
+The ticket is required in Audit, Grade, Rewrite, and Ticket modes. For a clean
+result, use zero violation counts and explain the evidence for the 100/A+
+score.

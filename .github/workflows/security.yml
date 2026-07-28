@@ -37,6 +37,7 @@ jobs:
         run: |
           python3 scripts/validate_repo.py
           python3 scripts/validate_cases.py
+          python3 scripts/test_ticket_score.py
 
       - name: Run static security checks
         shell: bash
