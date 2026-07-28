@@ -1,6 +1,6 @@
 <!-- slop-cop-brand:hero:start -->
 <p align="center">
-  <img src="skills/slop-cop/assets/brand/slop-cop-hero.png" alt="Slop Cop: Book the clichés. Keep the voice." width="100%">
+  <img src="skills/slop-cop/assets/brand/slop-cop-hero.png?v=4" alt="Slop Cop: Book the clichés. Keep the voice." width="100%">
 </p>
 <!-- slop-cop-brand:hero:end -->
 
@@ -12,9 +12,9 @@
 </p>
 
 <p align="center">
-  <img alt="license: MIT" src="https://img.shields.io/badge/license-MIT-FF2E88">
-  <img alt="beats: prose · design · code" src="https://img.shields.io/badge/beats-prose%20%C2%B7%20design%20%C2%B7%20code-C8FF00">
-  <img alt="works with: Claude Code, Codex, Cursor, GitHub Copilot" src="https://img.shields.io/badge/agents-Claude%20Code%20%C2%B7%20Codex%20%C2%B7%20Cursor%20%C2%B7%20Copilot-1A0B2E">
+  <img alt="license: MIT" src="https://img.shields.io/badge/license-MIT-FFAE4D">
+  <img alt="beats: prose · design · code" src="https://img.shields.io/badge/beats-prose%20%C2%B7%20design%20%C2%B7%20code-DCA4EA">
+  <img alt="works with: Claude Code, Codex, Cursor, GitHub Copilot" src="https://img.shields.io/badge/agents-Claude%20Code%20%C2%B7%20Codex%20%C2%B7%20Cursor%20%C2%B7%20Copilot-202124">
 </p>
 
 ## Install
@@ -139,7 +139,7 @@ A score below 35 normally needs revision. The score is an editorial aid, not an 
 
 <!-- slop-cop-brand:outcomes:start -->
 <p align="center">
-  <img src="skills/slop-cop/assets/brand/slop-cop-status-badges.png?v=3" alt="Slop Cop outcomes: Pass, Revise, and Booked" width="900">
+  <img src="skills/slop-cop/assets/brand/slop-cop-status-badges.png?v=4" alt="Slop Cop outcomes: Pass, Revise, and Booked" width="900">
 </p>
 <!-- slop-cop-brand:outcomes:end -->
 
@@ -228,16 +228,16 @@ MIT.
 <br>
 
 <p align="center">
-  <img src="skills/slop-cop/assets/brand/slop-cop-wordmark.png?v=3" alt="Slop Cop wordmark" width="850">
+  <img src="skills/slop-cop/assets/brand/slop-cop-wordmark.png?v=4" alt="Slop Cop wordmark with cat ears" width="850">
 </p>
 
 <table>
   <tr>
     <td width="34%" align="center">
-      <img src="skills/slop-cop/assets/brand/slop-cop-emblem.png?v=3" alt="Slop Cop clipboard emblem" width="280">
+      <img src="skills/slop-cop/assets/brand/slop-cop-emblem.png?v=4" alt="Slop Cop cat clipboard emblem" width="280">
     </td>
     <td width="66%" align="center">
-      <img src="skills/slop-cop/assets/brand/slop-cop-social-card.png" alt="Slop Cop social card" width="600">
+      <img src="skills/slop-cop/assets/brand/slop-cop-social-card.png?v=4" alt="Slop Cop social card with cat mascot" width="600">
     </td>
   </tr>
   <tr>
