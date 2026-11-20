@@ -40,6 +40,10 @@ Words that add emphasis, not meaning. They're verbal tics that signal AI-essay c
 - **"actually"** as intensifier: "what it actually looks like," "would actually survive," "actually uses it." Pure filler almost every time, cut on sight. It slips past careful editors, so hunt it specifically.
 - **"fluff," "genuinely," "literally"** when used for emphasis rather than meaning.
 
+## Generic shorthand: brief
+
+- **"brief"** is an AI-slop word to flag when it vaguely labels an idea, explanation, plan, summary, or set of instructions. Name the specific thing instead, or cut the word. Preserve an exact source quotation or an established literal use (for example, a legal brief) when changing it would alter meaning. A flag is a quality check, not evidence of AI authorship.
+
 ## Throat-clearing openers
 
 Announcement phrases before the actual point. Cut them and state the point.
@@ -80,6 +84,7 @@ Rule of thumb: any "here's what/this/that" construction is throat-clearing. Dele
 | Avoid | Use |
 |-------|-----|
 | robust | strong, reliable, solid |
+| durable | state what persists, what it withstands, or how long it lasts |
 | comprehensive | complete, thorough, full |
 | pivotal / crucial / vital | key, important, essential |
 | transformative | significant, major |
