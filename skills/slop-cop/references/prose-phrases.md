@@ -17,6 +17,57 @@ Words and phrases that read as AI slop. This is a reference for the scan, not an
 
 ---
 
+## Vocabulary refresh — 22 November 2026
+
+Review these terms and their inflections. Avoid them when they supply generic
+praise, manufactured importance, filler, or a recurring verbal tic. Do not
+replace them mechanically with equally vague synonyms. State the supported
+mechanism, action, or consequence, or remove the empty claim.
+
+### Research-associated vocabulary
+
+additionally, align with, boasts, delve, enduring, enhance, garner, interplay,
+intricate, landscape, meticulous, perfectly, pivotal, showcase, significant,
+tapestry, testament, underscore, valuable, vibrant.
+
+Source: [Pew Research Center, 20 August 2026](https://www.pewresearch.org/chart/key-words-and-punctuation-favored-by-ai-has-spiked-since-the-release-of-chatgpt/),
+a study of English-language web text. This selected vocabulary is associated
+with aggregate patterns, not a ranking of today's models or proof about any
+individual writer. It is not evidence of social-post performance.
+
+### Editorial watchlist and founder preferences
+
+- Verbs: leverage, utilize, facilitate, foster, bolster, navigate, streamline,
+  elevate, optimize, unlock, empower, harness, supercharge, revolutionize,
+  reimagine, embrace, resonate.
+- Descriptors: robust, durable, seamless, comprehensive, nuanced, multifaceted,
+  holistic, transformative, groundbreaking, cutting-edge, actionable, dynamic,
+  compelling, unparalleled, unprecedented, revolutionary, game-changing.
+- Abstract nouns: realm, ecosystem, synergy, journey, paradigm, beacon, symphony,
+  game-changer.
+- Tics and generic shorthand: actually, genuinely, literally, fundamentally,
+  importantly, ultimately, real, brief, flag.
+- Formulaic phrases: "unlock your potential", "move the needle", "deep dive",
+  "double down", "at its core", "here's the thing", "let that sink in",
+  "it's not X, it's Y", "not just X, but Y", "the kicker", "the result?",
+  "in today's fast-paced world", "it's worth noting", "now more than ever",
+  "a testament to", "a game-changer", "in conclusion".
+
+This second group is an editorial watchlist, including existing founder
+preferences. Do not claim every item has a measured AI frequency advantage.
+The existing absolute prohibition on `quietly` remains in force.
+
+### Context and Shan Voice
+
+Preserve supplied quotations, exact names, necessary technical meanings, and
+intentional satire or comic hashtags. For example, a feature flag, database
+key, statistical significance, and an ecological ecosystem have precise uses.
+A literal technical term must not fail because a generic marketing use would.
+Review whether the word earns its place and whether repetition sounds staged.
+Do not strip the founder's chosen slang or jokes to satisfy a vocabulary count.
+A clean vocabulary scan is not a voice pass. Shan Voice still checks reader fit,
+meaning, and human read separately. No style marker establishes AI authorship.
+
 ## Vague-hyperbole and contrarian-authority hooks
 
 An unfalsifiable claim about a vague "most" or "everyone," used to manufacture a brave/insider stance before any evidence. One of the loudest slop tells, and it's slop even when the rest of the piece is specific. Name the specific who, or drop the frame and open on the concrete thing.
