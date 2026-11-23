@@ -63,6 +63,7 @@ Rule of thumb: any "here's what/this/that" construction is throat-clearing. Dele
 | foster | encourage, develop, nurture |
 | bolster | strengthen, reinforce |
 | underscore | emphasize, highlight |
+| flag (generic shorthand) | name what to list, show, or mark. Use “list what I’d need to buy” for “flag anything I’d need to buy.” Preserve literal and technical uses such as “feature flag.” |
 | unveil | reveal, show, introduce |
 | navigate (abstract) | manage, handle, work through |
 | streamline | simplify |

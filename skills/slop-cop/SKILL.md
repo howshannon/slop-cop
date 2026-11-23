@@ -11,7 +11,7 @@ description: >-
 license: MIT
 metadata:
   author: howshannon
-  version: "0.4.1"
+  version: "0.4.2"
 ---
 
 # Slop Cop
@@ -119,7 +119,8 @@ before deciding severity.
     you,” and similar authority frames with a named population, source, or the
     concrete event.
 14. **Watch tic words in context.** “Actually,” “real,” “robust,” “seamless,”
-    “durable,” “brief,” and “the point” are tickets only when they add no meaning or repeat.
+    “durable,” “brief,” “flag,” and “the point” are tickets only when they add no
+    meaning or repeat.
 15. **Do not package ordinary examples as brands.** Avoid unnecessary title
     case such as “The Idea Engine” unless it is a real name.
 16. **Do not moralize after every anecdote.** Let a concrete detail land unless
